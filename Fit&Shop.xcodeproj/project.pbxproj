@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3277148A89B20B145966EF31 /* Pods_Fit_Shop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB9BA608B89017EC69F6CE6 /* Pods_Fit_Shop.framework */; };
-		F3110B9E20A26E4D0025AA80 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3110B9D20A26E4D0025AA80 /* Info.plist */; };
 		F3287400209FC44B004CCB33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32873FF209FC44B004CCB33 /* AppDelegate.swift */; };
 		F3287402209FC44B004CCB33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3287401209FC44B004CCB33 /* ViewController.swift */; };
 		F3287405209FC44B004CCB33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3287403209FC44B004CCB33 /* Main.storyboard */; };
@@ -42,13 +41,13 @@
 		F391FEC820A11D79005AE220 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391FEC720A11D78005AE220 /* Constant.swift */; };
 		F391FECA20A11D85005AE220 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391FEC920A11D85005AE220 /* Connection.swift */; };
 		F391FECC20A2340C005AE220 /* Data_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391FECB20A2340C005AE220 /* Data_Model.swift */; };
+		F3FB746920A2947A0077CF42 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3FB746820A2947A0077CF42 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6BCF83F14B4C9147B7B23C22 /* Pods-Fit&Shop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fit&Shop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fit&Shop/Pods-Fit&Shop.debug.xcconfig"; sourceTree = "<group>"; };
 		B2310A097003C4327DC50366 /* Pods-Fit&Shop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fit&Shop.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fit&Shop/Pods-Fit&Shop.release.xcconfig"; sourceTree = "<group>"; };
 		DBB9BA608B89017EC69F6CE6 /* Pods_Fit_Shop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fit_Shop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3110B9D20A26E4D0025AA80 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../../bbbb/Fit&shop/Fit&shop/Info.plist"; sourceTree = "<group>"; };
 		F32873FC209FC44B004CCB33 /* Fit&Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fit&Shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F32873FF209FC44B004CCB33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3287401209FC44B004CCB33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +82,7 @@
 		F391FEC720A11D78005AE220 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		F391FEC920A11D85005AE220 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		F391FECB20A2340C005AE220 /* Data_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data_Model.swift; sourceTree = "<group>"; };
+		F3FB746820A2947A0077CF42 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,11 +155,11 @@
 				F328741920A0E014004CCB33 /* BodyMeasurementVC.swift */,
 				F3287406209FC44B004CCB33 /* Assets.xcassets */,
 				F3287408209FC44B004CCB33 /* LaunchScreen.storyboard */,
-				F3110B9D20A26E4D0025AA80 /* Info.plist */,
 				F328742720A0FCB9004CCB33 /* DesignableX */,
 				F328741120A0D94D004CCB33 /* NEO SANS ARABIC BOLD.TTF */,
 				F328741220A0D94D004CCB33 /* NEOSANSARABIC.TTF */,
 				F328741B20A0E106004CCB33 /* FontExtension.swift */,
+				F3FB746820A2947A0077CF42 /* Info.plist */,
 			);
 			path = "Fit&Shop";
 			sourceTree = "<group>";
@@ -245,7 +245,7 @@
 			files = (
 				F328740A209FC44B004CCB33 /* LaunchScreen.storyboard in Resources */,
 				F328744120A10522004CCB33 /* CategoriesCell.xib in Resources */,
-				F3110B9E20A26E4D0025AA80 /* Info.plist in Resources */,
+				F3FB746920A2947A0077CF42 /* Info.plist in Resources */,
 				F328742620A0F951004CCB33 /* ItemDetailsVC.xib in Resources */,
 				F328741420A0D94D004CCB33 /* NEOSANSARABIC.TTF in Resources */,
 				F3287407209FC44B004CCB33 /* Assets.xcassets in Resources */,
