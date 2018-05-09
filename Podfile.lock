@@ -1,0 +1,42 @@
+PODS:
+  - Alamofire (4.7.2)
+  - AlamofireImage (3.3.1):
+    - Alamofire (~> 4.5)
+  - CDAlertView (0.8.1)
+  - IQKeyboardManagerSwift (6.0.2)
+  - MXSegmentedControl (0.1.0)
+  - NVActivityIndicatorView (4.2.0):
+    - NVActivityIndicatorView/Presenter (= 4.2.0)
+  - NVActivityIndicatorView/Presenter (4.2.0)
+  - SkyFloatingLabelTextField (3.4.1)
+  - SSSlider (1.0.2)
+  - SwiftyJSON (4.1.0)
+  - UILoadControl (2.1.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - AlamofireImage (~> 3.3)
+  - CDAlertView
+  - IQKeyboardManagerSwift
+  - MXSegmentedControl
+  - NVActivityIndicatorView
+  - SkyFloatingLabelTextField (~> 3.0)
+  - SSSlider
+  - SwiftyJSON
+  - UILoadControl
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
+  CDAlertView: 1b706701bf992c634b4493f6b62ba0d4feb21678
+  IQKeyboardManagerSwift: 59d4b0e140bc546c3c76ae5bb35b3dafd10b8172
+  MXSegmentedControl: 47b36aac2fda4d8c9117ab05088937e8c102796f
+  NVActivityIndicatorView: 75c9634073e03b31d7e2748cd2417feab1206195
+  SkyFloatingLabelTextField: 8085f20f57f74a00cfcae58099299faa1a971035
+  SSSlider: 586559d2e367b2d4fe68c038302148c83339d3bc
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+  UILoadControl: e742ddbe4c67ba1f13b00b7d462d4141307d021f
+
+PODFILE CHECKSUM: 8f3f6770d6d2ff19255d88a38a56d83d52fbb628
+
+COCOAPODS: 1.3.1
