@@ -15,5 +15,11 @@ pod 'MXSegmentedControl'
   pod 'Alamofire', '~> 4.5'
   pod 'SwiftyJSON'
    pod 'NVActivityIndicatorView'
+   pod 'FBSDKLoginKit'
+   pod 'FBSDKCoreKit'
+    pod 'FBSDKShareKit'
+   pod 'Google/SignIn'
+    pod 'Firebase/Core'
+
    pod 'AlamofireImage', '~> 3.3'
 end

@@ -76,6 +76,47 @@ extension AppDelegate {
         }
     }
     
+    
+    
+    func saveUserLogginData(email:String?,photoUrl : String? , uid : Int?,name:String?) {
+        //        print("saving User Data email: \(String(describing: email)) , photoUrl: \(String(describing: photoUrl)),uid: \(String(describing: uid)),  , photoUrl: \(String(describing: name))")
+        if email != "default" {
+            if   let email = email   {
+                UserDefaults.standard.setValue(email, forKey: "userEmail")
+            }else{
+                UserDefaults.standard.setValue(nil, forKey: "userEmail")
+                
+            }
+        }
+        if photoUrl != "default" {
+            
+            if  let photo = photoUrl {
+                UserDefaults.standard.setValue(photo, forKey: "profileImage")
+                //                print("saing this photo : \(photo)")
+            }else {
+                UserDefaults.standard.setValue(nil, forKey: "profileImage")
+            }
+        }
+        if uid != -1 {
+            
+            if  let uid = uid {
+                UserDefaults.standard.setValue(uid, forKey: "userId")
+            }else {
+                UserDefaults.standard.setValue(nil, forKey: "userId")
+                UserDefaults.standard.set(nil, forKey: Constant.parameters.UD_favAddID)
+                UserDefaults.standard.setValue(false, forKey: "hasSentPlayerID")
+            }
+        }
+        if name != "default" {
+            
+            if let name = name {
+                UserDefaults.standard.setValue(name, forKey: "usreName")
+            }else {
+                UserDefaults.standard.setValue(nil, forKey: "usreName")
+            }
+        }
+    }
+    
     func  getUserID() -> Int   {
         guard  let userID = UserDefaults.standard.value(forKey: "userId") as? Int else {
             //        print("error fetching userId from NSUserD.userId")

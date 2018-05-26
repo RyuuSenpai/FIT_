@@ -20,7 +20,7 @@ class Constant {
    
     static let parameters = API.Parameters.shared
     static let images_Url = "http://arafa.000webhostapp.com/Hyper/uploads/"
-    static let main_url = "https://fit-and-shop.herokuapp.com/"
+    static let main_url = "https://fit-and-shop.herokuapp.com/api/"
     static var gotCatSearch = false
     static var gotBrandSearch = false
    static var headers:[String:String] = ["Authorization":"627562626c6520617069206b6579" ]

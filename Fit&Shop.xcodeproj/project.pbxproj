@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		3277148A89B20B145966EF31 /* Pods_Fit_Shop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB9BA608B89017EC69F6CE6 /* Pods_Fit_Shop.framework */; };
+		84072CF120B849B200B7D01A /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84072CEF20B849B200B7D01A /* RegisterVC.swift */; };
+		84072CF220B849B200B7D01A /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84072CF020B849B200B7D01A /* RegisterVC.xib */; };
+		84072CF620B8519D00B7D01A /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84072CF520B8519D00B7D01A /* UIViewControllerExt.swift */; };
+		8428F12E20B979B2008310D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8428F12D20B979B2008310D6 /* GoogleService-Info.plist */; };
+		8428F13420B9F1BA008310D6 /* BodyMeasureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428F13320B9F1BA008310D6 /* BodyMeasureVC.swift */; };
+		8428F13E20BA1172008310D6 /* NextBtnTableVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428F13C20BA1172008310D6 /* NextBtnTableVCell.swift */; };
+		8428F13F20BA1172008310D6 /* NextBtnTableVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8428F13D20BA1172008310D6 /* NextBtnTableVCell.xib */; };
+		8428F14220BA1658008310D6 /* GuideViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428F14120BA1658008310D6 /* GuideViewC.swift */; };
+		8428F14320BA165D008310D6 /* GuideViewC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8428F14020BA1658008310D6 /* GuideViewC.xib */; };
 		F3287400209FC44B004CCB33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32873FF209FC44B004CCB33 /* AppDelegate.swift */; };
 		F3287402209FC44B004CCB33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3287401209FC44B004CCB33 /* ViewController.swift */; };
 		F3287405209FC44B004CCB33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3287403209FC44B004CCB33 /* Main.storyboard */; };
@@ -46,6 +55,15 @@
 
 /* Begin PBXFileReference section */
 		6BCF83F14B4C9147B7B23C22 /* Pods-Fit&Shop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fit&Shop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fit&Shop/Pods-Fit&Shop.debug.xcconfig"; sourceTree = "<group>"; };
+		84072CEF20B849B200B7D01A /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		84072CF020B849B200B7D01A /* RegisterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
+		84072CF520B8519D00B7D01A /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		8428F12D20B979B2008310D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8428F13320B9F1BA008310D6 /* BodyMeasureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyMeasureVC.swift; sourceTree = "<group>"; };
+		8428F13C20BA1172008310D6 /* NextBtnTableVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextBtnTableVCell.swift; sourceTree = "<group>"; };
+		8428F13D20BA1172008310D6 /* NextBtnTableVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NextBtnTableVCell.xib; sourceTree = "<group>"; };
+		8428F14020BA1658008310D6 /* GuideViewC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuideViewC.xib; sourceTree = "<group>"; };
+		8428F14120BA1658008310D6 /* GuideViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewC.swift; sourceTree = "<group>"; };
 		B2310A097003C4327DC50366 /* Pods-Fit&Shop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fit&Shop.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fit&Shop/Pods-Fit&Shop.release.xcconfig"; sourceTree = "<group>"; };
 		DBB9BA608B89017EC69F6CE6 /* Pods_Fit_Shop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fit_Shop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F32873FC209FC44B004CCB33 /* Fit&Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fit&Shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +132,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		84072CF720B8523700B7D01A /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F32873FF209FC44B004CCB33 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
 		F32873F3209FC44B004CCB33 = {
 			isa = PBXGroup;
 			children = (
@@ -136,12 +162,20 @@
 		F32873FE209FC44B004CCB33 /* Fit&Shop */ = {
 			isa = PBXGroup;
 			children = (
+				8428F13C20BA1172008310D6 /* NextBtnTableVCell.swift */,
+				8428F13D20BA1172008310D6 /* NextBtnTableVCell.xib */,
+				8428F13320B9F1BA008310D6 /* BodyMeasureVC.swift */,
+				8428F14120BA1658008310D6 /* GuideViewC.swift */,
+				8428F14020BA1658008310D6 /* GuideViewC.xib */,
+				84072CF720B8523700B7D01A /* AppDelegate */,
+				84072CEF20B849B200B7D01A /* RegisterVC.swift */,
+				84072CF020B849B200B7D01A /* RegisterVC.xib */,
 				F328744420A11762004CCB33 /* ReloadApp.swift */,
 				F328742320A0F951004CCB33 /* ItemDetailsVC.swift */,
+				84072CF520B8519D00B7D01A /* UIViewControllerExt.swift */,
 				F328742420A0F951004CCB33 /* ItemDetailsVC.xib */,
 				F391FECB20A2340C005AE220 /* Data_Model.swift */,
 				F328741F20A0F154004CCB33 /* MyExtensions.swift */,
-				F32873FF209FC44B004CCB33 /* AppDelegate.swift */,
 				F3287401209FC44B004CCB33 /* ViewController.swift */,
 				F391FEC920A11D85005AE220 /* Connection.swift */,
 				F391FEC720A11D78005AE220 /* Constant.swift */,
@@ -158,6 +192,7 @@
 				F328742720A0FCB9004CCB33 /* DesignableX */,
 				F328741120A0D94D004CCB33 /* NEO SANS ARABIC BOLD.TTF */,
 				F328741220A0D94D004CCB33 /* NEOSANSARABIC.TTF */,
+				8428F12D20B979B2008310D6 /* GoogleService-Info.plist */,
 				F328741B20A0E106004CCB33 /* FontExtension.swift */,
 				F3FB746820A2947A0077CF42 /* Info.plist */,
 			);
@@ -243,6 +278,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8428F14320BA165D008310D6 /* GuideViewC.xib in Resources */,
 				F328740A209FC44B004CCB33 /* LaunchScreen.storyboard in Resources */,
 				F328744120A10522004CCB33 /* CategoriesCell.xib in Resources */,
 				F3FB746920A2947A0077CF42 /* Info.plist in Resources */,
@@ -250,8 +286,11 @@
 				F328741420A0D94D004CCB33 /* NEOSANSARABIC.TTF in Resources */,
 				F3287407209FC44B004CCB33 /* Assets.xcassets in Resources */,
 				F328741320A0D94D004CCB33 /* NEO SANS ARABIC BOLD.TTF in Resources */,
+				8428F13F20BA1172008310D6 /* NextBtnTableVCell.xib in Resources */,
 				F328741820A0DD76004CCB33 /* BodyMeasurementCell.xib in Resources */,
+				8428F12E20B979B2008310D6 /* GoogleService-Info.plist in Resources */,
 				F3287405209FC44B004CCB33 /* Main.storyboard in Resources */,
+				84072CF220B849B200B7D01A /* RegisterVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,9 +303,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Fit&Shop/Pods-Fit&Shop-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -282,7 +324,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Fit&Shop/Pods-Fit&Shop-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/CDAlertView/CDAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/MXSegmentedControl/MXSegmentedControl.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
@@ -295,7 +344,14 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CDAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MXSegmentedControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
@@ -336,6 +392,7 @@
 			files = (
 				F328743B20A0FCB9004CCB33 /* UIVisualEffectViewX.swift in Sources */,
 				F328743620A0FCB9004CCB33 /* UITextFieldX.swift in Sources */,
+				8428F13E20BA1172008310D6 /* NextBtnTableVCell.swift in Sources */,
 				F328744520A11763004CCB33 /* ReloadApp.swift in Sources */,
 				F328742020A0F154004CCB33 /* MyExtensions.swift in Sources */,
 				F391FECC20A2340C005AE220 /* Data_Model.swift in Sources */,
@@ -354,11 +411,15 @@
 				F328743520A0FCB9004CCB33 /* UISliderX.swift in Sources */,
 				F328743D20A10136004CCB33 /* HomePageVC.swift in Sources */,
 				F328743420A0FCB9004CCB33 /* UILabelX.swift in Sources */,
+				84072CF620B8519D00B7D01A /* UIViewControllerExt.swift in Sources */,
 				F391FECA20A11D85005AE220 /* Connection.swift in Sources */,
 				F328744320A11453004CCB33 /* Login + RegisterationVC.swift in Sources */,
+				8428F13420B9F1BA008310D6 /* BodyMeasureVC.swift in Sources */,
 				F3287400209FC44B004CCB33 /* AppDelegate.swift in Sources */,
 				F328741A20A0E014004CCB33 /* BodyMeasurementVC.swift in Sources */,
+				8428F14220BA1658008310D6 /* GuideViewC.swift in Sources */,
 				F391FEC620A11D61005AE220 /* Post_Requests.swift in Sources */,
+				84072CF120B849B200B7D01A /* RegisterVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,7 +559,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YKSLKY2D83;
-				INFOPLIST_FILE = "$(SRCROOT)/../bbbb/Fit&shop/Fit&shop/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Fit&Shop/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZeOwls.FitAndShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -514,7 +575,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YKSLKY2D83;
-				INFOPLIST_FILE = "$(SRCROOT)/../bbbb/Fit&shop/Fit&shop/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Fit&Shop/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZeOwls.FitAndShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";

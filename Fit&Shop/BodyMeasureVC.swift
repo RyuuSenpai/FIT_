@@ -1,0 +1,121 @@
+//
+//  BodyMeasureVC.swift
+//  Fit&Shop
+//
+//  Created by admin on 5/26/18.
+//  Copyright © 2018 Killva. All rights reserved.
+//
+
+import UIKit
+
+class BodyMeasureVC: UIViewController  , UITableViewDelegate , UITableViewDataSource {
+    
+    
+    @IBOutlet weak var mainImgV: UIImageView!
+    @IBOutlet weak var bodyImgV: UIImageView!
+    @IBOutlet weak var bodyUnderLineV: UIView!
+    @IBOutlet weak var pieceImgV: UIImageView!
+    @IBOutlet weak var pieceUnderLineV: UIView!
+
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var bodyLbl: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    var selectedBtnTag =  0
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        tableView.delegate = self
+        tableView.dataSource  = self
+        tableView.register(UINib(nibName: "NextBtnTableVCell", bundle: nil), forCellReuseIdentifier: "NextBtnTableVCell")
+        tableView.register(UINib(nibName: "CategoriesCell", bundle: nil), forCellReuseIdentifier: "CategoriesCell")
+
+    }
+    
+    @IBAction func getMeasurmentsBtnsHandler(_ sender: UIButton) {
+        guard selectedBtnTag != sender.tag else { return }
+        selectedBtnTag = sender.tag
+        setupSelectionView( )
+        if sender.tag == 0 { // By Body
+            tableView.reloadData()
+        }else { // By Piece
+            tableView.reloadData()
+        }
+    }
+    
+    func setupSelectionView( ) {
+        let bodyisSelected = bodyImgV.image == #imageLiteral(resourceName: "ic_body_active_") ? true : false
+        
+        bodyImgV.image = bodyisSelected ? #imageLiteral(resourceName: "ic_body_unactive") : #imageLiteral(resourceName: "ic_body_active_")
+        bodyUnderLineV.backgroundColor = bodyisSelected ? .clear : .orange
+          pieceImgV.image = bodyisSelected ? #imageLiteral(resourceName: "ic_pices_active_") : #imageLiteral(resourceName: "ic_pices_unactive_")
+    pieceUnderLineV.backgroundColor = !bodyisSelected ? .clear : .orange
+        
+        
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if selectedBtnTag == 0 {
+            return 1
+        }else {
+            return 9
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if selectedBtnTag == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NextBtnTableVCell", for: indexPath) as! NextBtnTableVCell
+            
+//            let btn = UIButton()
+//                btn.imageView?.image = #imageLiteral(resourceName: "btn_")
+//            btn.translatesAutoresizingMaskIntoConstraints = false
+//            btn.widthAnchor.constraint(equalTo: cell.widthAnchor, multiplier: 0.5, constant: 0).isActive = true
+//            btn.centerXAnchor.constraint(equalTo: cell.centerXAnchor).isActive = true
+//            btn.heightAnchor.constraint(equalToConstant: 40).isActive = true
+////            btn.topAnchor.constraint(equalTo: cell.topAnchor, constant: 0).isActive = true
+//            btn.centerYAnchor.constraint(equalTo: cell.centerYAnchor).isActive = true
+//
+//            cell.addSubview(btn)
+
+            
+            return cell
+        }else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCell", for: indexPath) as! CategoriesCell
+            cell.sizeLbl.alpha = 0
+//            guard let data = selectedShop?.fittedClothesData else { return cell }
+//            cell.configCell(data: data[indexPath.row])
+            cell.selectionStyle = .none
+            return cell
+        }
+        
+    }
+    
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+      
+        let vi = UIView()
+        vi.backgroundColor = .clear
+        return vi
+ 
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    
+    
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
+}

@@ -22,13 +22,25 @@ class Connection: NSObject {
     enum URLS_Post_Enum {
         case saveMeauseData
         case get_user_measurment_by_id
+        case signup_User
+        case login_User
+        case google_Login
+        case fB_Login
         func stringValue() -> String {
              switch self {
+             case .login_User :
+                return Constant.main_url + "User/user_login"
             case .saveMeauseData:
                 return Constant.main_url  + "register_measurment"
+                
              case .get_user_measurment_by_id:
                 return Constant.main_url  + "get_user_measurment_by_id"
- 
+             case .signup_User:
+                    return Constant.main_url  + "User/user_signup"
+             case .google_Login:
+                return Constant.main_url  + "User/google_login"
+              case .fB_Login:
+                return Constant.main_url  + "User/facebook_login"
             }
         }
     }
