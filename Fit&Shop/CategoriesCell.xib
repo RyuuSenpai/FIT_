@@ -50,7 +50,7 @@
                         <rect key="frame" x="325.5" y="22" width="11.5" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="nNI-Wt-CkN" secondAttribute="height" multiplier="59:128" constant="2.25" id="oAQ-SA-a3g"/>
-                            <constraint firstAttribute="height" constant="20" id="zg1-Fi-4ft"/>
+                            <constraint firstAttribute="height" constant="10" id="zg1-Fi-4ft"/>
                         </constraints>
                     </imageView>
                 </subviews>
@@ -58,7 +58,7 @@
                 <constraints>
                     <constraint firstItem="SeI-6u-pZr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="2xv-gm-mdd"/>
                     <constraint firstItem="z7q-X2-ibc" firstAttribute="centerY" secondItem="nNI-Wt-CkN" secondAttribute="centerY" id="U78-zP-IDX"/>
-                    <constraint firstAttribute="trailing" secondItem="nNI-Wt-CkN" secondAttribute="trailing" constant="8" id="UV2-Is-btS"/>
+                    <constraint firstAttribute="trailing" secondItem="nNI-Wt-CkN" secondAttribute="trailing" constant="30" id="UV2-Is-btS"/>
                     <constraint firstItem="SeI-6u-pZr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="3" id="ZBh-Fg-3MS"/>
                     <constraint firstItem="nNI-Wt-CkN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mJP-mB-zwY"/>
                     <constraint firstItem="nNI-Wt-CkN" firstAttribute="leading" secondItem="z7q-X2-ibc" secondAttribute="trailing" constant="15" id="vgo-id-U8R"/>

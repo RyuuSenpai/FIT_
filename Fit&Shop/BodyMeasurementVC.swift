@@ -132,11 +132,16 @@ hideKeyboardWhenTapped()
     }
     
     func sendData( ) {
+        guard let ch = selectionArr[0]?.measure ,
+        let waist = selectionArr[1]?.measure ,let hips = selectionArr[2]?.measure ,let length = selectionArr[3]?.measure else {
+            
+            return
+        }
         let parm : [String : Any] = [
-             "chest":selectionArr[0]!.measure,
-            "waist":selectionArr[1]!.measure,
-            "hips":selectionArr[2]!.measure,
-            "length":selectionArr[3]!.measure,
+             "chest":ch,
+            "waist":waist,
+            "hips":hips,
+            "length":length,
             "user_id" : ad.getUserID(),
             "type" : pieceType.rawValue
         ]

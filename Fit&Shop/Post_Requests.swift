@@ -52,7 +52,7 @@ class  Post_Requests : Connection {
 
     func getUserHomeData_request(postType:URLS_Post_Enum ,parms : Parameters ,completion:@escaping ( [Brands_DataModel] ) -> (),failure failed: @escaping (String?)->() ) {
         //http://45.55.134.13/api/v1/places/1/8/20
-        //        print("URL: is getPlacesList URL : \(url) location is  \(ad.currentLocation)")
+                print("URL: is getUserHomeData_request URL : \(postType.stringValue())")
         //        print("lat is \(ad.latitude) lon is \(ad.longitude)")
         
         
@@ -88,7 +88,7 @@ class  Post_Requests : Connection {
     func social_Login(postType:Connection.URLS_Post_Enum ,parms : Parameters ,completion:@escaping ( Profile_Details_M ) -> (),failure failed: @escaping (String?)->() ) {
         //http://45.55.134.13/api/v1/places/1/8/20
         //                print("URL: is getPlacesList URL : \(postType.stringValue()) ")
-        //        print("URL: is getPlacesList URL : \(parms) ")
+                print("URL: is getPlacesList URL : \(parms) ")
         
         //        print("lat is \(ad.latitude) lon is \(ad.longitude)")
         Alamofire.request(postType.stringValue(), method: .post, parameters: parms,encoding: JSONEncoding.default, headers: Constant.headers).responseJSON {
@@ -104,12 +104,18 @@ class  Post_Requests : Connection {
                 print(value)
                 let jData = JSON(value)
                 let userData = jData["user"]
+                                                
+                                               
+            guard userData.stringValue !=  "-2" else {
+                failed(jData["message"].stringValue)
+            return
+                                                }
                 guard userData.dictionary != nil else {
                     failed("\(jData["message_code"].intValue)")
                     return
                 }
                 let y = Profile_Details_M(userData)
-                
+            
                 completion(y)
                 
                 

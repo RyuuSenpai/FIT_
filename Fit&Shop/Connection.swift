@@ -31,10 +31,10 @@ class Connection: NSObject {
              case .login_User :
                 return Constant.main_url + "User/user_login"
             case .saveMeauseData:
-                return Constant.main_url  + "register_measurment"
+                return Constant.main_url  + "General/register_entry"
                 
              case .get_user_measurment_by_id:
-                return Constant.main_url  + "get_user_measurment_by_id"
+                return Constant.main_url  + "General/get_user_measurement_by_id"
              case .signup_User:
                     return Constant.main_url  + "User/user_signup"
              case .google_Login:

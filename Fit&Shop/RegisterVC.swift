@@ -122,17 +122,10 @@ class RegisterVC: UIViewController {
         Post_Requests().social_Login(postType: .signup_User, parms: parm, completion: {[weak self] (rData ) in
             
             DispatchQueue.main.async {
-//                ad.saveUserLogginData(email: rData.email , photoUrl:nil, uid: rData.id, name: rData.fullName)
-                ad.saveUserLogginData(mobileNum: "", uid: rData.id, name: rData.fullName)
-//                self.dismissKeyboard()
-//                ad.reloadWithAnimationToHome()
-                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BodyMeasureVC") as! BodyMeasureVC //BodyMeasureVC()
-                self?.present(vc, animated: true, completion: nil)
-                ad.killLoading()
-                
+                self?.setupSocialLoginRequestResponse(rData)
             }
         }) { (err ) in
-//            self.showApiErrorSms(err: err )
+            self.showApiErrorSms(err: err )
             ad.killLoading()
         }
     }

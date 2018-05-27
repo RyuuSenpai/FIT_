@@ -91,7 +91,7 @@ class Profile_Details_M {
     private var _last_name : String!
     private var _latitude : String!
     private var _longitude : String!
-    
+    private var _has_measurement : Int!
     private var _date_add : String!
     private var _date_upd : String!
     private var _id : Int!
@@ -108,7 +108,7 @@ class Profile_Details_M {
     var date_add : String {return _date_add }
     var date_upd : String {return _date_upd }
     var  id : Int {return _id }
-    
+    var has_measurement : Bool { return _has_measurement == 0 ? false : true }
     var email : String {return _email }
     var fav_lan : String {return _fav_lan }
     var fb_token : String {return _fb_token }
@@ -139,6 +139,7 @@ class Profile_Details_M {
         self._date_add = jsonData[Constant.parameters.date_add].stringValue
         self._date_upd = jsonData[Constant.parameters.date_upd].stringValue
         self._id = jsonData[Constant.parameters.id].intValue
+        self._has_measurement = jsonData["has_measurement"].intValue
         let img =  jsonData[Constant.parameters.image_url].stringValue
         if img != "" {
             self._image = img

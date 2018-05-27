@@ -24,7 +24,18 @@ extension UIViewController {
         view.endEditing(true)
     }
     
-    
+    func setupSocialLoginRequestResponse(_ rData : Profile_Details_M) {
+        guard !rData.has_measurement  else  {
+            ad.saveUserLogginData(mobileNum: "", uid: rData.id, name: rData.fullName)
+            //                self.dismissKeyboard()
+            ad.reloadWithAnimationToHome()
+            ad.killLoading()
+            return
+        }
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BodyMeasureVC") as! BodyMeasureVC //BodyMeasureVC()
+        self.present(vc, animated: true, completion: nil)
+        ad.killLoading()
+    }
 }
 
 //

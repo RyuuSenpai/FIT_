@@ -51,16 +51,10 @@ class Login___RegisterationVC: UIViewController , GIDSignInDelegate,GIDSignInUID
         
         ad.isLoading()
         
-        Post_Requests().social_Login(postType: .login_User, parms: parm, completion: {  (rData ) in
+        Post_Requests().social_Login(postType: .login_User, parms: parm, completion: {[weak self] (rData ) in
             
             DispatchQueue.main.async {
-                //                ad.saveUserLogginData(email: rData.email , photoUrl:nil, uid: rData.id, name: rData.fullName)
-                
-                ad.saveUserLogginData(mobileNum: "", uid: rData.id, name: rData.fullName)
-                //                self.dismissKeyboard()
-                ad.reloadWithAnimationToHome()
-                ad.killLoading()
-                
+                self?.setupSocialLoginRequestResponse(rData)
             }
         }) { (err ) in
             //            self.showApiErrorSms(err: err )
@@ -190,11 +184,12 @@ class Login___RegisterationVC: UIViewController , GIDSignInDelegate,GIDSignInUID
             
             ad.isLoading()
             
-            self.postRequest.social_Login(postType: .google_Login, parms: userDict , completion: { (rData) in
+            self.postRequest.social_Login(postType: .google_Login, parms: userDict , completion: {[weak self] (rData ) in
                 
-                ad.saveUserLogginData(email: rData.email , photoUrl: userDict["picture"], uid: rData.id, name: rData.fullName)
-                ad.reloadWithAnimationToHome()
-            }, failure: { (err ) in
+                DispatchQueue.main.async {
+                    self?.setupSocialLoginRequestResponse(rData)
+                }
+                }, failure: { (err ) in
                 print(err)
                 self.showApiErrorSms(err: err )
             })
@@ -241,12 +236,12 @@ class Login___RegisterationVC: UIViewController , GIDSignInDelegate,GIDSignInUID
                             ad.isLoading()
                         }
                         
-                        self?.postRequest.social_Login(postType: .fB_Login, parms: userDict , completion: { (rData) in
+                        self?.postRequest.social_Login(postType: .fB_Login, parms: userDict , completion: {[weak self] (rData ) in
                             
-                            //                            print(rData)
-                            ad.saveUserLogginData(email: rData.email , photoUrl: userDict["picture"], uid: rData.id, name: rData.fullName)
-                            ad.reloadWithAnimationToHome()
-                        }, failure: { (err ) in
+                            DispatchQueue.main.async {
+                                self?.setupSocialLoginRequestResponse(rData)
+                            }
+                            }, failure: { (err ) in
                             self?.showApiErrorSms(err: err )
                         })
                         

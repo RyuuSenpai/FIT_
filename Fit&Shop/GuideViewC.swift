@@ -65,11 +65,9 @@ class GuideViewC: UIViewController ,UIScrollViewDelegate{
     }
 
     @IBAction func setupNewProfileHandler(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Login___RegisterationVC")
+        self.present(vc, animated: true, completion: nil)
         
-        let vc = RegisterVC()
-
-                self.present(vc, animated: true, completion: nil)
-
     }
     
     @IBAction func iHaveProfileHandler(_ sender: UIButton) {

@@ -40,11 +40,12 @@ class BodyMeasureVC: UIViewController  , UITableViewDelegate , UITableViewDataSo
     @IBOutlet weak var pieceImgV: UIImageView!
     @IBOutlet weak var pieceUnderLineV: UIView!
     
+    @IBOutlet weak var measurmentTypeLbl: UILabel!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var bodyLbl: UILabel!
     @IBOutlet weak var tableView: UITableView!
     var selectedBtnTag =  0
-    
+    var profileData : Profile_Details_M?
     var pieceData : [Piece_Type] = [
         
     Piece_Type(name: "T-Shirt", type: .T_Shirt),
@@ -67,25 +68,42 @@ class BodyMeasureVC: UIViewController  , UITableViewDelegate , UITableViewDataSo
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupSelectionView(selectedBtnTag)
+    }
     @IBAction func getMeasurmentsBtnsHandler(_ sender: UIButton) {
         guard selectedBtnTag != sender.tag else { return }
         selectedBtnTag = sender.tag
-        setupSelectionView( )
+        setupSelectionView( sender.tag )
+
         if sender.tag == 0 { // By Body
-            tableView.reloadData()
+//            tableView.reloadData()
         }else { // By Piece
-            tableView.reloadData()
+//            tableView.reloadData()
         }
     }
     
-    func setupSelectionView( ) {
-        let bodyisSelected = bodyImgV.image == #imageLiteral(resourceName: "ic_body_active_") ? true : false
-        
-        bodyImgV.image = bodyisSelected ? #imageLiteral(resourceName: "ic_body_unactive") : #imageLiteral(resourceName: "ic_body_active_")
-        bodyUnderLineV.backgroundColor = bodyisSelected ? .clear : .orange
-        pieceImgV.image = bodyisSelected ? #imageLiteral(resourceName: "ic_pices_active_") : #imageLiteral(resourceName: "ic_pices_unactive_")
-        pieceUnderLineV.backgroundColor = !bodyisSelected ? .clear : .orange
-        
+    func setupSelectionView(_ tag: Int) {
+        if tag != 0 {
+             bodyImgV.image =   #imageLiteral(resourceName: "ic_body_unactive")
+            bodyUnderLineV.backgroundColor =  .clear
+            pieceImgV.image =   #imageLiteral(resourceName: "ic_pices_active_")
+            pieceUnderLineV.backgroundColor =   .orange
+             measurmentTypeLbl.text = "Piece Measurement"
+            bodyLbl.text  = "Tell us about a Piece\n that fit you Perfectly"
+            mainImgV.image =     #imageLiteral(resourceName: "bg_pices")
+        }else {
+             bodyImgV.image =   #imageLiteral(resourceName: "ic_body_active_")
+            bodyUnderLineV.backgroundColor =   .orange
+            pieceImgV.image =   #imageLiteral(resourceName: "ic_pices_unactive_")
+            pieceUnderLineV.backgroundColor =   .clear
+            measurmentTypeLbl.text = "Body Measurement"
+            bodyLbl.text  = "Measure your Body parts\n and get the perfect fit size."
+            mainImgV.image =   #imageLiteral(resourceName: "bg_body")
+        }
+        tableView.reloadData()
+
         
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -117,7 +135,7 @@ class BodyMeasureVC: UIViewController  , UITableViewDelegate , UITableViewDataSo
         }else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCell", for: indexPath) as! CategoriesCell
             cell.sizeLbl.alpha = 0
-            cell.nameLbl.text = pieceData[indexPath.row ].name
+            cell.nameLbl.text = "   " + pieceData[indexPath.row ].name
             //            guard let data = selectedShop?.fittedClothesData else { return cell }
             //            cell.configCell(data: data[indexPath.row])
             cell.selectionStyle = .none
@@ -144,6 +162,15 @@ class BodyMeasureVC: UIViewController  , UITableViewDelegate , UITableViewDataSo
         vc.modalTransitionStyle = .coverVertical
         self.present(vc, animated: true, completion: nil)
     
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if selectedBtnTag == 0 {
+            return 50
+            
+        }else {
+            
+            return  35
+        }
     }
     
     

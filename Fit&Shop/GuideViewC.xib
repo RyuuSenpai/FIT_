@@ -97,26 +97,13 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2P-tU-psB">
-                    <rect key="frame" x="80" y="567" width="214" height="28"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="214" id="ASF-JR-gyf"/>
-                        <constraint firstAttribute="height" constant="28" id="Ehz-2F-55S"/>
-                    </constraints>
-                    <state key="normal" title="I have a profile" backgroundImage="btn2_">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <connections>
-                        <action selector="iHaveProfileHandler:" destination="-1" eventType="touchUpInside" id="JgI-Un-cEV"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OId-t2-nWe">
-                    <rect key="frame" x="80" y="531" width="214" height="28"/>
+                    <rect key="frame" x="81" y="561" width="214" height="35"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="28" id="Ka0-mz-7qG"/>
+                        <constraint firstAttribute="height" constant="35" id="Ka0-mz-7qG"/>
                         <constraint firstAttribute="width" constant="214" id="pZ4-bo-MRQ"/>
                     </constraints>
-                    <state key="normal" title="Set up a new profile" backgroundImage="btn_">
+                    <state key="normal" title="Start Now" backgroundImage="btn_">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
@@ -129,25 +116,20 @@
                 <constraint firstItem="jFT-jJ-T5u" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="-16" id="1FN-FS-zcv"/>
                 <constraint firstItem="gWl-p0-fl5" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="4" id="3yD-vd-hi3"/>
                 <constraint firstItem="1JX-a4-jKO" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="7hS-K6-naK"/>
+                <constraint firstItem="qdp-US-OSV" firstAttribute="top" secondItem="OId-t2-nWe" secondAttribute="bottom" constant="14" id="9Uo-Nj-2hd"/>
                 <constraint firstItem="jFT-jJ-T5u" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="CIn-R3-oLx"/>
-                <constraint firstItem="qdp-US-OSV" firstAttribute="top" secondItem="p2P-tU-psB" secondAttribute="bottom" constant="15" id="Ey6-DG-PPr"/>
-                <constraint firstItem="p2P-tU-psB" firstAttribute="top" secondItem="OId-t2-nWe" secondAttribute="bottom" constant="8" id="Gfe-HO-6Iu"/>
-                <constraint firstItem="p2P-tU-psB" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="IVg-TM-iM2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oRk-w7-PBK" secondAttribute="trailing" id="KIf-dy-4KV"/>
-                <constraint firstItem="OId-t2-nWe" firstAttribute="height" secondItem="p2P-tU-psB" secondAttribute="height" id="LxT-Tq-r4N"/>
-                <constraint firstItem="OId-t2-nWe" firstAttribute="width" secondItem="p2P-tU-psB" secondAttribute="width" id="NJD-97-EfS"/>
                 <constraint firstItem="oRk-w7-PBK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-20" id="Pby-Sv-a9m"/>
                 <constraint firstItem="YNs-Rd-96E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="QWA-Hm-YXZ"/>
                 <constraint firstItem="gWl-p0-fl5" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="SqY-Ra-3pM"/>
                 <constraint firstItem="qdp-US-OSV" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="TJ6-d0-A0f"/>
+                <constraint firstItem="OId-t2-nWe" firstAttribute="centerX" secondItem="qdp-US-OSV" secondAttribute="centerX" id="Wgb-B9-GtO"/>
                 <constraint firstItem="1JX-a4-jKO" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="aKA-Ig-CIB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="oRk-w7-PBK" secondAttribute="bottom" id="aQJ-cd-XN9"/>
                 <constraint firstItem="qdp-US-OSV" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-20" id="buI-39-FCd"/>
-                <constraint firstItem="OId-t2-nWe" firstAttribute="trailing" secondItem="p2P-tU-psB" secondAttribute="trailing" id="gu4-j5-HIt"/>
                 <constraint firstItem="jFT-jJ-T5u" firstAttribute="top" secondItem="1JX-a4-jKO" secondAttribute="bottom" constant="13" id="mOY-tr-RX4"/>
                 <constraint firstItem="oRk-w7-PBK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mY8-X5-PQB"/>
                 <constraint firstItem="1JX-a4-jKO" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="pZp-Ay-cCR"/>
-                <constraint firstItem="OId-t2-nWe" firstAttribute="leading" secondItem="p2P-tU-psB" secondAttribute="leading" id="vDZ-gR-ihv"/>
                 <constraint firstItem="YNs-Rd-96E" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="xgj-gF-YXq"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -155,7 +137,6 @@
         </view>
     </objects>
     <resources>
-        <image name="btn2_" width="199" height="21"/>
         <image name="btn_" width="199" height="25"/>
     </resources>
 </document>
