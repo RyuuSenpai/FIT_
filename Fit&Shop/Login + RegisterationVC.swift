@@ -49,11 +49,13 @@ class Login___RegisterationVC: UIViewController , GIDSignInDelegate,GIDSignInUID
             "email": email
          ]
         
+        ad.isLoading()
         
         Post_Requests().social_Login(postType: .login_User, parms: parm, completion: {  (rData ) in
             
             DispatchQueue.main.async {
                 //                ad.saveUserLogginData(email: rData.email , photoUrl:nil, uid: rData.id, name: rData.fullName)
+                
                 ad.saveUserLogginData(mobileNum: "", uid: rData.id, name: rData.fullName)
                 //                self.dismissKeyboard()
                 ad.reloadWithAnimationToHome()
@@ -77,8 +79,8 @@ class Login___RegisterationVC: UIViewController , GIDSignInDelegate,GIDSignInUID
     
     @IBAction func signupBtnHandler(_ sender: UIButton) {
         
-//        let vc = RegisterVC()
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BodyMeasureVC" ) as! BodyMeasureVC
+        let vc = RegisterVC()
+//        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BodyMeasureVC" ) as! BodyMeasureVC
         self.present(vc, animated: true, completion: nil)
     }
     //    func animate() {

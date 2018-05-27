@@ -118,14 +118,16 @@ class RegisterVC: UIViewController {
             "gender": genderType == 1 ? "m":"f",
             "mobile": mobileNum
         ]
-        
+        ad.isLoading()
         Post_Requests().social_Login(postType: .signup_User, parms: parm, completion: {[weak self] (rData ) in
             
             DispatchQueue.main.async {
 //                ad.saveUserLogginData(email: rData.email , photoUrl:nil, uid: rData.id, name: rData.fullName)
                 ad.saveUserLogginData(mobileNum: "", uid: rData.id, name: rData.fullName)
 //                self.dismissKeyboard()
-                ad.reloadWithAnimationToHome()
+//                ad.reloadWithAnimationToHome()
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BodyMeasureVC") as! BodyMeasureVC //BodyMeasureVC()
+                self?.present(vc, animated: true, completion: nil)
                 ad.killLoading()
                 
             }

@@ -284,11 +284,11 @@
                                 <color key="backgroundColor" red="0.072296999394893646" green="0.63271093368530273" blue="0.60425567626953125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="0Uy-Fl-pbE" firstAttribute="leading" secondItem="qAz-wb-ayk" secondAttribute="leading" constant="3" id="6ss-xW-OED"/>
-                                    <constraint firstAttribute="trailing" secondItem="Dty-1O-zO1" secondAttribute="trailing" constant="20" id="BGG-ET-Km3"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dty-1O-zO1" secondAttribute="trailing" constant="35" id="BGG-ET-Km3"/>
                                     <constraint firstAttribute="height" constant="60" id="TgK-Ln-d8R"/>
                                     <constraint firstItem="q9D-7A-gCw" firstAttribute="leading" secondItem="0Uy-Fl-pbE" secondAttribute="leading" id="Vjb-mM-LaU"/>
                                     <constraint firstAttribute="bottom" secondItem="0Uy-Fl-pbE" secondAttribute="bottom" constant="3" id="WA4-7Y-e4i"/>
-                                    <constraint firstItem="Dty-1O-zO1" firstAttribute="leading" secondItem="qAz-wb-ayk" secondAttribute="leading" constant="20" id="XQN-iF-NOs"/>
+                                    <constraint firstItem="Dty-1O-zO1" firstAttribute="leading" secondItem="qAz-wb-ayk" secondAttribute="leading" constant="35" id="XQN-iF-NOs"/>
                                     <constraint firstItem="q9D-7A-gCw" firstAttribute="width" secondItem="q9D-7A-gCw" secondAttribute="height" multiplier="13:21" id="a6l-CN-gH6"/>
                                     <constraint firstItem="q9D-7A-gCw" firstAttribute="centerY" secondItem="0Uy-Fl-pbE" secondAttribute="centerY" constant="5.5" id="azs-2N-oyQ"/>
                                     <constraint firstAttribute="bottom" secondItem="Dty-1O-zO1" secondAttribute="bottom" constant="8" id="xDr-Ks-EGj"/>
@@ -426,6 +426,7 @@
                         <outlet property="horizontalSlider" destination="P4L-ZM-eqI" id="NX0-Uw-eap"/>
                         <outlet property="percentLbl" destination="LlS-dt-NA7" id="NI1-IH-Sfh"/>
                         <outlet property="tableView" destination="qc3-dx-kay" id="6BU-M7-zNt"/>
+                        <outlet property="titleLbl" destination="Dty-1O-zO1" id="hrx-4q-uZF"/>
                         <segue destination="hmA-Pw-rSv" kind="show" identifier="savedData" id="QTk-rT-Jt4"/>
                     </connections>
                 </viewController>
@@ -504,7 +505,7 @@
                                         <rect key="frame" x="13.666666666666657" y="196" width="305" height="35"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                                 <color key="value" red="0.080938525499999997" green="0.6986106634" blue="0.66310185190000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

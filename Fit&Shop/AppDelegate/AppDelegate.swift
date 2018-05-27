@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let firPar = self.getUserID() == 0 ? [:] : ["UserID":getUserID()]
         FIRAnalytics.logEvent(withName: kFIREventAppOpen, parameters: firPar)
 
-        guard  let didShowTutorial = UserDefaults.standard.value(forKey: "didShowTutorial") as? Bool , didShowTutorial else {
+        guard self.getUserID() != 0  else {  //let didShowTutorial = UserDefaults.standard.value(forKey: "didShowTutorial") as? Bool , didShowTutorial else {
             //            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             //            let controller = storyboard.instantiateViewController(withIdentifier: "GuideVC") as! GuideVC
             let initialViewController = GuideViewC()

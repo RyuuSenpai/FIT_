@@ -11,16 +11,15 @@ import SSSlider
 import SwiftyJSON
 
 class BodyMeasurementVC: UIViewController  , UITableViewDelegate , UITableViewDataSource {
+    
     @IBOutlet weak var horizontalSlider: SSSlider!
-
     @IBOutlet weak var tableView : UITableView!
     @IBOutlet weak var percentLbl: UILabel!
     @IBOutlet weak var backImgV : UIImageView!
-
-    var phoneNum = ""
-    var name  = "" 
-    var data : [BodyM_Model] = []
+    @IBOutlet weak var titleLbl: UILabel!
     
+     var data : [BodyM_Model] = []
+    var pieceType : Piece_By_ID! 
     var selectionArr : [Int:SavedMesurments] = [:] {
      
         didSet {
@@ -34,16 +33,17 @@ class BodyMeasurementVC: UIViewController  , UITableViewDelegate , UITableViewDa
 
     @IBAction func backBtnhandler(_ sender: UIButton) {
         
-        self.navigationController?.popViewController(animated: true)
+self.dismissPushedView()
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if phoneNum == "" {
-            backImgV.alpha = 1
-        }else {
-            backImgV.alpha = 0
-        }
+//        if phoneNum == "" {
+//            backImgV.alpha = 1
+//        }else {
+//            backImgV.alpha = 0
+//        }
         horizontalSlider.value = 0.0
         horizontalSlider.isUserInteractionEnabled = false 
 setupSegment()
@@ -64,7 +64,11 @@ hideKeyboardWhenTapped()
         // Do any additional setup after loading the view.
     }
 
-   
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        titleLbl.text = title ?? ""
+
+    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -99,25 +103,25 @@ hideKeyboardWhenTapped()
             return
         }
 
-        guard phoneNum != "" else {
-//            if let name_  =  UserDefaults.value(forKey: "usreName") as? String , let phoneNum_ =   UserDefaults.value(forKey: "usreName") as? String, let id =   UserDefaults.value(forKey: "userId") as? Int    {
+//        guard phoneNum != "" else {
+////            if let name_  =  UserDefaults.value(forKey: "usreName") as? String , let phoneNum_ =   UserDefaults.value(forKey: "usreName") as? String, let id =   UserDefaults.value(forKey: "userId") as? Int    {
+////            self.view.showSimpleAlert("Done", "You have Completed the Measurments.", .success)
+////                sendData(name: name_, phoneNum: phoneNum_ , userID : id)
+//
+////            }else {
+////
+////                ad.saveUserLogginData(mobileNum: nil, uid: nil, name: nil)
+////                ad.reloadWithAnimationToRegister()
+////
+////            }
+////
 //            self.view.showSimpleAlert("Done", "You have Completed the Measurments.", .success)
-//                sendData(name: name_, phoneNum: phoneNum_ , userID : id)
-
-//            }else {
+//            self.navigationController?.popViewController(animated: true)
 //
-//                ad.saveUserLogginData(mobileNum: nil, uid: nil, name: nil)
-//                ad.reloadWithAnimationToRegister()
-//
-//            }
-//
-            self.view.showSimpleAlert("Done", "You have Completed the Measurments.", .success)
-            self.navigationController?.popViewController(animated: true)
-
-            return
-        }
+//            return
+//        }
        
-        sendData(name: name, phoneNum: phoneNum , userID : 1)
+        sendData( )
 //        performSegue(withIdentifier: "savedData", sender: self)
 //        let vc = ItemDetailsVC()
 //
@@ -127,14 +131,14 @@ hideKeyboardWhenTapped()
         
     }
     
-    func sendData(name : String , phoneNum : String , userID : Int) {
+    func sendData( ) {
         let parm : [String : Any] = [
-            "name":name,
-            "mobile": phoneNum ,
-            "chest":selectionArr[0]!.measure,
+             "chest":selectionArr[0]!.measure,
             "waist":selectionArr[1]!.measure,
             "hips":selectionArr[2]!.measure,
-            "length":selectionArr[3]!.measure
+            "length":selectionArr[3]!.measure,
+            "user_id" : ad.getUserID(),
+            "type" : pieceType.rawValue
         ]
         ad.isLoading()
         Post_Requests().defaultPostRequest(postType: Connection.URLS_Post_Enum.saveMeauseData, parms: parm, completion: {(rData ) in
@@ -142,7 +146,7 @@ hideKeyboardWhenTapped()
                 ad.killLoading()
                 let id = rData["response"]["id"].intValue
                 print(rData, id )
-                ad.saveUserLogginData(mobileNum: self.phoneNum, uid: id, name: self.name)
+ 
                 self.view.showSimpleAlert("Done", "You have Completed the Measurments.", .success)
 //                if self.phoneNum != "" {
                 ad.reloadWithAnimationToHome()
