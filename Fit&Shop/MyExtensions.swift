@@ -33,6 +33,7 @@ extension UIViewController {
             return
         }
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BodyMeasureVC") as! BodyMeasureVC //BodyMeasureVC()
+        vc.profileData = rData
         self.present(vc, animated: true, completion: nil)
         ad.killLoading()
     }

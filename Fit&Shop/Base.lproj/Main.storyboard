@@ -473,19 +473,19 @@
                                 <rect key="frame" x="41.333333333333343" y="95" width="331.33333333333326" height="530"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="uab-b4-04J">
-                                        <rect key="frame" x="110" y="23" width="112.33333333333331" height="113"/>
+                                        <rect key="frame" x="128" y="50" width="76.333333333333314" height="77"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="uab-b4-04J" secondAttribute="height" multiplier="1:1" id="2OA-sU-wNC"/>
                                         </constraints>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="13C-MI-qAG" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="13.666666666666657" y="151" width="305" height="35"/>
+                                        <rect key="frame" x="13.666666666666657" y="142" width="305" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="hQS-fL-NvP"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                                 <color key="value" red="0.080938525499999997" green="0.6986106634" blue="0.66310185190000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -507,7 +507,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5rp-gd-ix7" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                        <rect key="frame" x="13.666666666666657" y="196" width="305" height="35"/>
+                                        <rect key="frame" x="13.666666666666657" y="187" width="305" height="35"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -532,7 +532,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jk5-iM-cdJ" customClass="UIButtonX" customModule="Fit_Shop" customModuleProvider="target">
-                                        <rect key="frame" x="66.999999999999986" y="288" width="198.66666666666663" height="32"/>
+                                        <rect key="frame" x="66.999999999999986" y="279" width="198.66666666666663" height="32"/>
                                         <color key="backgroundColor" red="0.96350699660000005" green="0.60170120000000005" blue="0.18133550879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="VPN-rP-nof"/>
@@ -551,7 +551,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHv-H6-KQV">
-                                        <rect key="frame" x="154.33333333333331" y="335" width="24" height="21"/>
+                                        <rect key="frame" x="154.33333333333331" y="326" width="24" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="Bzp-LI-zqV"/>
                                             <constraint firstAttribute="height" constant="21" id="FvE-Ua-rOq"/>
@@ -561,7 +561,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBG-1A-Gzm">
-                                        <rect key="frame" x="100" y="367.66666666666669" width="40" height="40"/>
+                                        <rect key="frame" x="100" y="358.66666666666669" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="57u-9n-4hi"/>
                                             <constraint firstAttribute="width" secondItem="KBG-1A-Gzm" secondAttribute="height" multiplier="1:1" id="gx4-0p-8Eg"/>
@@ -572,14 +572,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cty-wf-fyn">
-                                        <rect key="frame" x="191.33333333333331" y="367.66666666666669" width="40" height="40"/>
+                                        <rect key="frame" x="191.33333333333331" y="358.66666666666669" width="40" height="40"/>
                                         <state key="normal" image="ic_google+_"/>
                                         <connections>
                                             <action selector="googleHandler:" destination="waf-3z-D8Y" eventType="touchUpInside" id="w5t-On-KsE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xp4-Md-bjy">
-                                        <rect key="frame" x="135.33333333333331" y="447.33333333333337" width="64" height="35"/>
+                                        <rect key="frame" x="135.33333333333331" y="438.33333333333337" width="64" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Xp4-Md-bjy" secondAttribute="height" multiplier="11:6" id="sFG-bp-Nsn"/>
                                             <constraint firstAttribute="height" constant="35" id="tia-dv-cqb"/>
@@ -593,7 +593,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaz-xE-LEa">
-                                        <rect key="frame" x="77.333333333333343" y="419.66666666666663" width="179.00000000000003" height="21"/>
+                                        <rect key="frame" x="77.333333333333343" y="410.66666666666669" width="179.00000000000003" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="4wT-I4-Z2Z"/>
                                             <constraint firstAttribute="width" constant="179" id="dE2-WM-IQu"/>

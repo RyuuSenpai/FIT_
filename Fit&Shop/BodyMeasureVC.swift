@@ -134,7 +134,7 @@ class BodyMeasureVC: UIViewController  , UITableViewDelegate , UITableViewDataSo
             return cell
         }else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCell", for: indexPath) as! CategoriesCell
-            cell.sizeLbl.alpha = 0
+            cell.sizesStackView.alpha = 0
             cell.nameLbl.text = "   " + pieceData[indexPath.row ].name
             //            guard let data = selectedShop?.fittedClothesData else { return cell }
             //            cell.configCell(data: data[indexPath.row])
@@ -157,6 +157,7 @@ class BodyMeasureVC: UIViewController  , UITableViewDelegate , UITableViewDataSo
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BodyMeasurementVC" ) as! BodyMeasurementVC
+        vc.profileData = self.profileData
         vc.title = selectedBtnTag != 0  ? pieceData[indexPath.row ].name : "Body Measurment"
         vc.pieceType = selectedBtnTag != 0  ? pieceData[indexPath.row  ].type : Piece_By_ID.Body
         vc.modalTransitionStyle = .coverVertical

@@ -25,8 +25,7 @@ class  Post_Requests : Connection {
         //        print("URL: is getPlacesList URL : \(url) location is  \(ad.currentLocation)")
         //        print("lat is \(ad.latitude) lon is \(ad.longitude)")
         
-        
-        
+ 
         Alamofire.request(postType.stringValue(), method: .post, parameters: parms,encoding: JSONEncoding.default, headers: Constant.headers).responseJSON {
             response in
             print(postType.stringValue())
@@ -50,37 +49,36 @@ class  Post_Requests : Connection {
     }
     
 
-    func getUserHomeData_request(postType:URLS_Post_Enum ,parms : Parameters ,completion:@escaping ( [Brands_DataModel] ) -> (),failure failed: @escaping (String?)->() ) {
+    func getUserHomeData_request(postType:URLS_Post_Enum ,parms : Parameters ,completion:@escaping ( [Brands_DataModel], Profile_Details_M ) -> (),failure failed: @escaping (String?)->() ) {
         //http://45.55.134.13/api/v1/places/1/8/20
                 print("URL: is getUserHomeData_request URL : \(postType.stringValue())")
         //        print("lat is \(ad.latitude) lon is \(ad.longitude)")
         
         
-        
-        Alamofire.request(postType.stringValue(), method: .post, parameters: parms,encoding: JSONEncoding.default, headers: Constant.headers).responseJSON {
-            response in
-            print(postType.stringValue())
+        let url = postType.stringValue() + "?UserID=\(ad.getUserID())"
+        Connection.performGet(urlString: url, success: { (jData) in
+            
+            
+            
+            print(url)
             print(parms)
-            switch response.result {
-            case .success:
-                print(response)
-                guard let value = response.value else {
-                    failed(response.error?.localizedDescription)
-                    return
-                }
-                let jData = JSON(value)
-                var data  : [Brands_DataModel]  = []
-                for x in  jData["response"] {
-                    data.append(Brands_DataModel(json: x.1))
-                }
-                completion(data)
-                
-                break
-            case .failure(let error):
-                failed(response.error?.localizedDescription)
-                print(response.error?.localizedDescription)
+            print(jData)
+            var data  : [Brands_DataModel]  = []
+            let userData = jData["user"]
+            
+    let user = Profile_Details_M(userData)
+            
+            for x in  jData["response"]["brands"] {
+                data.append(Brands_DataModel(json: x.1))
             }
+            completion(data,user)
+        }) { (err) in
+            
+            
+            failed(err?.localizedDescription)
         }
+        
+ 
     }
     
     

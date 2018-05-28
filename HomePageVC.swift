@@ -17,7 +17,7 @@ class HomePageVC: UIViewController , UITableViewDelegate , UITableViewDataSource
 
     var data : [Brands_DataModel] = []
     var selectedShop : Brands_DataModel?
-    
+    var profileData : Profile_Details_M?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -74,11 +74,13 @@ class HomePageVC: UIViewController , UITableViewDelegate , UITableViewDataSource
 //        data.append(ShopData(shopname: "Maher", catData: daa2))
 //        data.append(ShopData(shopname: "Eslam", catData: daa4))
         ad.isLoading()
-        Post_Requests().getUserHomeData_request(postType: .get_user_measurment_by_id, parms: ["user_id" : ad.getUserID()], completion: { (rData ) in
+        Post_Requests().getUserHomeData_request(postType: .get_user_measurment_by_id, parms: [:], completion: { (rData ,user)  in
             
             DispatchQueue.main.async {
                 ad.killLoading()
                 self.data = rData
+                print(user)
+                self.profileData = user
                 if rData.count >= 1 {
                 self.selectedShop = self.data[0]
                 }
@@ -89,6 +91,7 @@ class HomePageVC: UIViewController , UITableViewDelegate , UITableViewDataSource
                 self.segmentedControl.indicator.lineView.backgroundColor = #colorLiteral(red: 0.09810762852, green: 0.2034293413, blue: 0.2315387726, alpha: 1)
                 self.segmentedControl.addTarget(self, action: #selector(self.changeIndex(segmentedControl:)), for: .valueChanged)
 //                self.view.showSimpleAlert("Netwo", "", .error)
+                self.segmentedControl.setNeedsLayout()
                 self.tableView.reloadData()
 
             }
@@ -106,6 +109,7 @@ class HomePageVC: UIViewController , UITableViewDelegate , UITableViewDataSource
         if sender.tag == 2 {
             
             let vc =  self.storyboard?.instantiateViewController(withIdentifier: "BodyMeasurementVC") as! BodyMeasurementVC
+            vc.profileData = profileData
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -134,7 +138,7 @@ class HomePageVC: UIViewController , UITableViewDelegate , UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let dataSel = self.selectedShop?.fittedClothesData[indexPath.row] else { return }
         let vc = ItemDetailsVC()
-        vc.title = selectedShop?.fittedClothesData[indexPath.row].piece
+        vc.title = selectedShop?.fittedClothesData[indexPath.row].piece_name
         vc.data = dataSel
         self.navigationController?.pushViewController(vc, animated: true    )
     }

@@ -30,6 +30,7 @@ class Login___RegisterationVC: UIViewController , GIDSignInDelegate,GIDSignInUID
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 //        animate()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -152,8 +153,8 @@ class Login___RegisterationVC: UIViewController , GIDSignInDelegate,GIDSignInUID
         
     }
     func sign(_ signIn: GIDSignIn!, dismiss viewController: UIViewController!) {
-        
         viewController.dismiss(animated: true, completion: nil)
+        ad.killLoading()
         //NotificationCenter.default.post(name: .closeLoginVC, object: nil)
         
     }
@@ -240,6 +241,7 @@ class Login___RegisterationVC: UIViewController , GIDSignInDelegate,GIDSignInUID
                             
                             DispatchQueue.main.async {
                                 self?.setupSocialLoginRequestResponse(rData)
+                                
                             }
                             }, failure: { (err ) in
                             self?.showApiErrorSms(err: err )

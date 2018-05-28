@@ -19,7 +19,9 @@ class BodyMeasurementVC: UIViewController  , UITableViewDelegate , UITableViewDa
     @IBOutlet weak var titleLbl: UILabel!
     
      var data : [BodyM_Model] = []
-    var pieceType : Piece_By_ID! 
+    var pieceType : Piece_By_ID!
+    var profileData : Profile_Details_M?
+    var isEditingMeasur = false
     var selectionArr : [Int:SavedMesurments] = [:] {
      
         didSet {
@@ -142,8 +144,8 @@ hideKeyboardWhenTapped()
             "waist":waist,
             "hips":hips,
             "length":length,
-            "user_id" : ad.getUserID(),
-            "type" : pieceType.rawValue
+            "user_id" : profileData?.id ?? 0 ,
+            "type" : isEditing ? 0  : pieceType.rawValue
         ]
         ad.isLoading()
         Post_Requests().defaultPostRequest(postType: Connection.URLS_Post_Enum.saveMeauseData, parms: parm, completion: {(rData ) in
@@ -151,9 +153,17 @@ hideKeyboardWhenTapped()
                 ad.killLoading()
                 let id = rData["response"]["id"].intValue
                 print(rData, id )
- 
+                
+               
                 self.view.showSimpleAlert("Done", "You have Completed the Measurments.", .success)
 //                if self.phoneNum != "" {
+                guard !self.isEditingMeasur else {
+                    self.dismissPushedView()
+                    return
+                }
+                if let data = self.profileData {
+                    ad.saveUserLogginData(mobileNum: nil, uid: data.id, name: data.first_name)
+                }
                 ad.reloadWithAnimationToHome()
 //                }else {
 //                    self.navigationController?.popViewController(animated: true)

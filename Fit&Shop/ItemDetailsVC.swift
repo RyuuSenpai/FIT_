@@ -22,22 +22,42 @@ class ItemDetailsVC: UIViewController {
     @IBOutlet weak var medSizeLbl: UIButton!
     @IBOutlet weak var bigSizeLbl: UIButton!
 
-    let smallSTxt = "Small : Will be tight"
-    let medTxtS = "Medium : is the best Size that will Fit"
-    let largeTxtS = "Large size : will be more compfortable"
-    let s = "0 cm"
-    let m = "+2 cm"
-    let l = "+5 cm"
-    var data  :FittedClothesData!
+//    let smallSTxt = "Small : Will be tight"
+//    let medTxtS = "Medium : is the best Size that will Fit"
+//    let largeTxtS = "Large size : will be more compfortable"
+//    let s = "0 cm"
+//    let m = "+2 cm"
+//    let l = "+5 cm"
+    var data  :Piece_Data!
     override func viewDidLoad() {
         super.viewDidLoad()
-        seupTxt(body: largeTxtS, measur: l)
-
-        smallBtn.setTitleColor(.white, for: .normal )
-        smallBtn.backgroundColor = .orange
+        setupSizesBtns() 
+         if data.sizes.count >= 1 {
+            seupTxt(data: data.sizes[0],medSizeLbl)
+        }
+        
         // Do any additional setup after loading the view.
         pageTitle.text = title
 //        bodyLbl.text = smallSTxt
+        
+        
+        
+    }
+    
+    
+    func setupSizesBtns() {
+        if  data.sizes.count == 2   {
+         
+            sizeBtnStackView.removeArrangedSubview(smallBtn)
+            smallBtn.alpha = 0
+        }else if  data.sizes.count == 1   {
+        
+            sizeBtnStackView.removeArrangedSubview(bigSizeLbl)
+            sizeBtnStackView.removeArrangedSubview(smallBtn)
+            smallBtn.alpha = 0
+            bigSizeLbl.alpha = 0
+
+        }
     }
     @IBAction func backBtnhandler(_ sender: UIButton) {
         
@@ -54,7 +74,9 @@ class ItemDetailsVC: UIViewController {
             medSizeLbl.backgroundColor = .clear
             bigSizeLbl.setTitleColor(.black, for: .normal )
             bigSizeLbl.backgroundColor = .clear
-       
+            if data.sizes.count >= 3 {
+                seupTxt(data: data.sizes[2],sender)
+            }
 //            seupTxt(body: smallSTxt, measur: s)
         case 1 :
             medSizeLbl.setTitleColor(.white, for: .normal )
@@ -64,9 +86,10 @@ class ItemDetailsVC: UIViewController {
             smallBtn.backgroundColor = .clear
             bigSizeLbl.setTitleColor(.black, for: .normal )
             bigSizeLbl.backgroundColor = .clear
-//            seupTxt(body: medTxtS, measur: m)
-            
-        case 2 :
+            if data.sizes.count >= 1 {
+            seupTxt(data: data.sizes[0],sender)
+            }
+         case 2 :
             bigSizeLbl.setTitleColor(.white, for: .normal )
             bigSizeLbl.backgroundColor = .orange
             
@@ -74,20 +97,19 @@ class ItemDetailsVC: UIViewController {
             medSizeLbl.backgroundColor = .clear
             smallBtn.setTitleColor(.black, for: .normal )
             smallBtn.backgroundColor = .clear
-//            seupTxt(body: largeTxtS, measur: l)
+//            seupTxt(body: largeTxtS, measur:
+            if data.sizes.count >= 2 {
+                seupTxt(data: data.sizes[1],sender)
+            }
         default : break
 
         }
     }
     
-    func seupTxt(body : String , measur : String) {
-        smallBtn.alpha = 0
-        medSizeLbl.alpha = 0
-        bigSizeLbl.setTitle(data.size, for: .normal)
-        bigSizeLbl.backgroundColor = .orange
-        bigSizeLbl.setTitleColor(.white, for: .normal )
-        sizeBtnStackView.removeArrangedSubview(smallBtn)
-        sizeBtnStackView.removeArrangedSubview(medSizeLbl)
+    func seupTxt(data : FittedClothesData ,_ sender: UIButton) {
+        sender.setTitle(data.size, for: .normal)
+        sender.backgroundColor = .orange
+        sender.setTitleColor(.white, for: .normal )
         bodyLbl.text = data.desc
         chestMeasurmentLbl.text = "\(data.chest) cm"
         hipsMeasurmentLbl.text = "\(data.hips) cm"

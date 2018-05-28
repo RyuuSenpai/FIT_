@@ -15,25 +15,52 @@ class Brands_DataModel {
     
    private  var _brand : String!
    private  var _brand_id : Int!
-    
+    private var _fittedClothesData : [Piece_Data] = []
+
     var brandName : String { return _brand }
     var brandID : Int { return _brand_id}
-    private var _fittedClothesData : [FittedClothesData] = []
     
-    var fittedClothesData : [FittedClothesData] { return _fittedClothesData }
+    var fittedClothesData : [Piece_Data] { return _fittedClothesData }
+   
     init(json : JSON ) {
         
-        self._brand = json["brand"].stringValue
+        self._brand = json["brand_name"].stringValue
         self._brand_id = json["brand_id"].intValue
 
         for x in json["fitted"] {
-            _fittedClothesData.append(FittedClothesData(json: x.1))
+            let data = Piece_Data(json: x.1)
+            _fittedClothesData.append(data)
+            
         }
-    
-    }
+     }
     
 }
 
+class Piece_Data {
+    
+    private var _sizes : [FittedClothesData] = []
+
+    private  var _piece_name : String!
+    private  var _piece_id : Int!
+    
+    var piece_name : String { return _piece_name }
+    var piece_id : Int { return _piece_id }
+    
+    var sizes : [FittedClothesData] { return _sizes }
+
+    init(json : JSON ) {
+        
+        self._piece_name = json["piece_name"].stringValue
+        self._piece_id = json["piece_id"].intValue
+        
+        for x in json["sizes"] {
+            let data = FittedClothesData(json: x.1)
+            _sizes.append(data)
+            
+        }
+        
+    }
+}
 
 class  FittedClothesData {
     
@@ -46,7 +73,8 @@ class  FittedClothesData {
      private   var _size_id : Int!
      private   var _waist : Double!
     private var _desc : String!
-    
+    private   var _id : Int!
+
     var desc : String { return _desc }
     var chest : Double { return _chest }
     var hips : Double { return _hips}
@@ -57,12 +85,12 @@ class  FittedClothesData {
     var size_id : Int{ return _size_id}
     var waist : Double{ return _waist}
     
-    
+    var id : Int { return _id}
+
     
     
     init(json : JSON) {
         self._desc = json["desc"].stringValue
-
         self._chest = json["chest"].doubleValue
         self._hips = json["hips"].doubleValue
         self._length = json["length"].doubleValue
@@ -71,7 +99,7 @@ class  FittedClothesData {
         self._size = json["size"].stringValue
         self._size_id = json["size_id"].intValue
         self._waist = json["waist"].doubleValue
-
+        self._id = json["id"].intValue
     }
  
 }
