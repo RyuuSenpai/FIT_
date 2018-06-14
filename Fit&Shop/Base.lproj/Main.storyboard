@@ -830,6 +830,23 @@ Measurment Method</string>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8y-1q-XAj" customClass="UIButtonX" customModule="Fit_Shop" customModuleProvider="target">
+                                            <rect key="frame" x="10" y="8" width="45" height="45"/>
+                                            <color key="backgroundColor" red="0.080938525499999997" green="0.6986106634" blue="0.66310185190000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="Q8c-7i-IBo"/>
+                                                <constraint firstAttribute="width" secondItem="B8y-1q-XAj" secondAttribute="height" multiplier="1:1" id="x9n-eQ-acf"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <state key="normal" title="X">
+                                                <color key="titleColor" red="0.92766296863555908" green="0.98845106363296509" blue="0.99286192655563354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="22.5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" red="0.96068006750000001" green="0.96084433790000001" blue="0.96066969629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
@@ -843,6 +860,7 @@ Measurment Method</string>
                                         <constraint firstAttribute="trailing" secondItem="hFb-bv-KGG" secondAttribute="trailing" id="EOY-KS-dT1"/>
                                         <constraint firstItem="eng-Te-edf" firstAttribute="top" secondItem="hFb-bv-KGG" secondAttribute="bottom" constant="30" id="EWt-eV-jzx"/>
                                         <constraint firstItem="cRa-gZ-5dm" firstAttribute="leading" secondItem="O9z-BU-mLi" secondAttribute="leading" constant="40" id="FWa-LB-3Dh"/>
+                                        <constraint firstItem="B8y-1q-XAj" firstAttribute="leading" secondItem="O9z-BU-mLi" secondAttribute="leading" constant="10" id="GCW-WM-QLz"/>
                                         <constraint firstItem="XzE-45-hHw" firstAttribute="leading" secondItem="hFb-bv-KGG" secondAttribute="leading" id="HSt-TZ-nkC"/>
                                         <constraint firstItem="hFb-bv-KGG" firstAttribute="top" secondItem="wSU-vy-3aC" secondAttribute="bottom" id="XBv-WX-4ah"/>
                                         <constraint firstItem="hFb-bv-KGG" firstAttribute="leading" secondItem="O9z-BU-mLi" secondAttribute="leading" id="aXb-mv-WhT"/>
@@ -854,6 +872,7 @@ Measurment Method</string>
                                         <constraint firstItem="mzu-c5-wwy" firstAttribute="leading" secondItem="O9z-BU-mLi" secondAttribute="leading" constant="20" id="thn-bf-9Ff"/>
                                         <constraint firstAttribute="trailing" secondItem="cRa-gZ-5dm" secondAttribute="trailing" constant="40" id="u3i-5r-Dhn"/>
                                         <constraint firstItem="eng-Te-edf" firstAttribute="centerX" secondItem="hFb-bv-KGG" secondAttribute="centerX" id="vNL-68-aEZ"/>
+                                        <constraint firstItem="B8y-1q-XAj" firstAttribute="top" secondItem="O9z-BU-mLi" secondAttribute="top" constant="8" id="waX-7F-x7W"/>
                                         <constraint firstItem="XzE-45-hHw" firstAttribute="top" secondItem="O9z-BU-mLi" secondAttribute="top" constant="-17" id="z4m-rA-1Hf"/>
                                     </constraints>
                                 </view>
@@ -872,6 +891,7 @@ Measurment Method</string>
                         <outlet property="bodyImgV" destination="WFd-9J-0ej" id="4Nb-pH-9Uq"/>
                         <outlet property="bodyLbl" destination="cRa-gZ-5dm" id="giq-6m-3cS"/>
                         <outlet property="bodyUnderLineV" destination="foc-hP-nuT" id="Sdo-vR-uxa"/>
+                        <outlet property="dismissBtn" destination="B8y-1q-XAj" id="4bT-rx-ViQ"/>
                         <outlet property="mainImgV" destination="XzE-45-hHw" id="fXY-y8-rL8"/>
                         <outlet property="measurmentTypeLbl" destination="eng-Te-edf" id="Xqp-8E-bF3"/>
                         <outlet property="pieceImgV" destination="Sae-Fn-81x" id="eSV-zK-4Oh"/>

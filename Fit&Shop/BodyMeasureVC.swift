@@ -10,7 +10,7 @@ import UIKit
 
 enum Piece_By_ID  : Int  {
     case Body = 0
-     case   Jacket = 1
+    case   Jacket = 1
     case   Coat
     case   Shirt
     case   Polo_Shirt
@@ -44,18 +44,19 @@ class BodyMeasureVC: UIViewController  , UITableViewDelegate , UITableViewDataSo
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var bodyLbl: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var dismissBtn: UIButton!
+    
     var selectedBtnTag =  0
     var profileData : Profile_Details_M?
+    var isEditingMeasurement = false
     var pieceData : [Piece_Type] = [
-        
-    Piece_Type(name: "T-Shirt", type: .T_Shirt),
-    Piece_Type(name: "Jacket", type: .Jacket),
-    Piece_Type(name: "Shirt", type: .Shirt),
-    Piece_Type(name: "Polo-Shirt", type: .Polo_Shirt),
-    Piece_Type(name: "Long Sleeve", type: .Long_Sleeve),
+        Piece_Type(name: "T-Shirt", type: .T_Shirt),
+        Piece_Type(name: "Jacket", type: .Jacket),
+        Piece_Type(name: "Shirt", type: .Shirt),
+        Piece_Type(name: "Polo-Shirt", type: .Polo_Shirt),
+        Piece_Type(name: "Long Sleeve", type: .Long_Sleeve),
+        ]
     
-    ]
-  
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,37 +65,43 @@ class BodyMeasureVC: UIViewController  , UITableViewDelegate , UITableViewDataSo
         tableView.dataSource  = self
         tableView.register(UINib(nibName: "NextBtnTableVCell", bundle: nil), forCellReuseIdentifier: "NextBtnTableVCell")
         tableView.register(UINib(nibName: "CategoriesCell", bundle: nil), forCellReuseIdentifier: "CategoriesCell")
-     
+        
+        dismissBtn.addTarget(self, action: #selector(dismissPushedView), for: .touchUpInside)
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupSelectionView(selectedBtnTag)
+        dismissBtn.alpha = isEditingMeasurement ? 1 : 0
     }
+    
+    
+    
+    
     @IBAction func getMeasurmentsBtnsHandler(_ sender: UIButton) {
         guard selectedBtnTag != sender.tag else { return }
         selectedBtnTag = sender.tag
         setupSelectionView( sender.tag )
-
+        
         if sender.tag == 0 { // By Body
-//            tableView.reloadData()
+            //            tableView.reloadData()
         }else { // By Piece
-//            tableView.reloadData()
+            //            tableView.reloadData()
         }
     }
     
     func setupSelectionView(_ tag: Int) {
         if tag != 0 {
-             bodyImgV.image =   #imageLiteral(resourceName: "ic_body_unactive")
+            bodyImgV.image =   #imageLiteral(resourceName: "ic_body_unactive")
             bodyUnderLineV.backgroundColor =  .clear
             pieceImgV.image =   #imageLiteral(resourceName: "ic_pices_active_")
             pieceUnderLineV.backgroundColor =   .orange
-             measurmentTypeLbl.text = "Piece Measurement"
+            measurmentTypeLbl.text = "Piece Measurement"
             bodyLbl.text  = "Tell us about a Piece\n that fit you Perfectly"
             mainImgV.image =     #imageLiteral(resourceName: "bg_pices")
         }else {
-             bodyImgV.image =   #imageLiteral(resourceName: "ic_body_active_")
+            bodyImgV.image =   #imageLiteral(resourceName: "ic_body_active_")
             bodyUnderLineV.backgroundColor =   .orange
             pieceImgV.image =   #imageLiteral(resourceName: "ic_pices_unactive_")
             pieceUnderLineV.backgroundColor =   .clear
@@ -103,7 +110,7 @@ class BodyMeasureVC: UIViewController  , UITableViewDelegate , UITableViewDataSo
             mainImgV.image =   #imageLiteral(resourceName: "bg_body")
         }
         tableView.reloadData()
-
+        
         
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -130,7 +137,7 @@ class BodyMeasureVC: UIViewController  , UITableViewDelegate , UITableViewDataSo
             //            cell.addSubview(btn)
             
             cell.selectionStyle = .none
-
+            
             return cell
         }else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCell", for: indexPath) as! CategoriesCell
@@ -162,7 +169,7 @@ class BodyMeasureVC: UIViewController  , UITableViewDelegate , UITableViewDataSo
         vc.pieceType = selectedBtnTag != 0  ? pieceData[indexPath.row  ].type : Piece_By_ID.Body
         vc.modalTransitionStyle = .coverVertical
         self.present(vc, animated: true, completion: nil)
-    
+        
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if selectedBtnTag == 0 {

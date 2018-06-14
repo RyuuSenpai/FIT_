@@ -107,10 +107,13 @@ class HomePageVC: UIViewController , UITableViewDelegate , UITableViewDataSource
 
     @IBAction func tabBtnHandler(_ sender: UIButton) {
         if sender.tag == 2 {
-            
-            let vc =  self.storyboard?.instantiateViewController(withIdentifier: "BodyMeasurementVC") as! BodyMeasurementVC
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BodyMeasureVC") as! BodyMeasureVC //BodyMeasureVC()
             vc.profileData = profileData
-            self.navigationController?.pushViewController(vc, animated: true)
+            vc.isEditingMeasurement = true 
+            self.present(vc, animated: true, completion: nil)
+//            let vc =  self.storyboard?.instantiateViewController(withIdentifier: "BodyMeasurementVC") as! BodyMeasurementVC
+//            vc.profileData = profileData
+//            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

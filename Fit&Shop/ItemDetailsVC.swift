@@ -47,17 +47,21 @@ class ItemDetailsVC: UIViewController {
     
     func setupSizesBtns() {
         if  data.sizes.count == 2   {
-         
+            bigSizeLbl.setTitle(data.sizes[1].size, for: .normal)
+            medSizeLbl.setTitle(data.sizes[0].size, for: .normal)
             sizeBtnStackView.removeArrangedSubview(smallBtn)
             smallBtn.alpha = 0
         }else if  data.sizes.count == 1   {
-        
+            medSizeLbl.setTitle(data.sizes[0].size, for: .normal)
             sizeBtnStackView.removeArrangedSubview(bigSizeLbl)
             sizeBtnStackView.removeArrangedSubview(smallBtn)
             smallBtn.alpha = 0
             bigSizeLbl.alpha = 0
-
-        }
+        }else if  data.sizes.count == 3   {
+            bigSizeLbl.setTitle(data.sizes[1].size, for: .normal)
+            medSizeLbl.setTitle(data.sizes[0].size, for: .normal)
+            smallBtn.setTitle(data.sizes[2].size, for: .normal)
+         }
     }
     @IBAction func backBtnhandler(_ sender: UIButton) {
         
@@ -115,7 +119,7 @@ class ItemDetailsVC: UIViewController {
         hipsMeasurmentLbl.text = "\(data.hips) cm"
         waistMeasurmentLbl.text = "\(data.waist) cm"
         shirtLenghMeasurmentLbl.text = "\(data.length) cm"
-    }
+     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
