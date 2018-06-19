@@ -22,7 +22,16 @@ class ItemDetailsVC: UIViewController {
     @IBOutlet weak var medSizeLbl: UIButton!
     @IBOutlet weak var bigSizeLbl: UIButton!
 
-//    let smallSTxt = "Small : Will be tight"
+    @IBOutlet weak var a_lineV: UIView!
+    @IBOutlet weak var b_lineV: UIView!
+    @IBOutlet weak var c_lineV: UIView!
+    @IBOutlet weak var d_lineV: UIView!
+    @IBOutlet weak var a_lineCircle: UIView!
+    @IBOutlet weak var b_lineCircle: UIView!
+    @IBOutlet weak var c_lineCircle: UIView!
+    @IBOutlet weak var d_lineCircle: UIView!
+
+    //    let smallSTxt = "Small : Will be tight"
 //    let medTxtS = "Medium : is the best Size that will Fit"
 //    let largeTxtS = "Large size : will be more compfortable"
 //    let s = "0 cm"
@@ -119,7 +128,33 @@ class ItemDetailsVC: UIViewController {
         hipsMeasurmentLbl.text = "\(data.hips) cm"
         waistMeasurmentLbl.text = "\(data.waist) cm"
         shirtLenghMeasurmentLbl.text = "\(data.length) cm"
+        setupViewsColors(line: a_lineV, circleLetter: a_lineCircle, measurements: data.chest)
+        setupViewsColors(line: b_lineV, circleLetter: b_lineCircle, measurements: data.waist)
+        setupViewsColors(line: c_lineV, circleLetter: c_lineCircle, measurements: data.hips)
+        setupViewsColors(line: d_lineV, circleLetter: d_lineCircle, measurements: data.length)
+
      }
+    
+    func setupViewsColors(line : UIView , circleLetter : UIView,measurements: Double) {
+        
+        if measurements 	>= 4 {
+            line.alpha = 1	
+            circleLetter.alpha = 1
+            line.backgroundColor = .green
+            circleLetter.backgroundColor = .green
+        }else if measurements <= 0 {
+            line.alpha = 1
+            circleLetter.alpha = 1
+            line.backgroundColor = .red
+            circleLetter.backgroundColor = .red
+        }else {
+            line.alpha = 0
+            circleLetter.alpha = 0
+            circleLetter.clipsToBounds = true
+            
+        }
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
