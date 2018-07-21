@@ -40,7 +40,7 @@ extension AppDelegate {
         //        if (ud.object(forKey: "token") != nil) {
         let storyb = UIStoryboard(name: "Main", bundle: Bundle.main)
         
-        let vc  = storyb.instantiateViewController(withIdentifier: "HomeNav") as! UINavigationController
+        let vc  = storyb.instantiateViewController(withIdentifier: "HomeNav") as! UITabBarController
         rootviewcontroller.rootViewController = vc
         
     }

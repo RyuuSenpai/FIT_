@@ -16,7 +16,7 @@ class Brands_DataModel {
    private  var _brand : String!
    private  var _brand_id : Int!
     private var _fittedClothesData : [Piece_Data] = []
-
+    var isOpened = Bool()
     var brandName : String { return _brand }
     var brandID : Int { return _brand_id}
     

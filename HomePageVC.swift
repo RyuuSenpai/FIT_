@@ -8,16 +8,17 @@
 //
 
 import UIKit
-import MXSegmentedControl
+
 
 class HomePageVC: UIViewController , UITableViewDelegate , UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var segmentedControl: MXSegmentedControl!
 
+    
     var data : [Brands_DataModel] = []
     var selectedShop : Brands_DataModel?
     var profileData : Profile_Details_M?
+    let brandImages = [#imageLiteral(resourceName: "brand_Ravin"),#imageLiteral(resourceName: "brand_Nas"),#imageLiteral(resourceName: "Town_team")]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,6 +31,7 @@ class HomePageVC: UIViewController , UITableViewDelegate , UITableViewDataSource
         
         tableView.register(UINib(nibName:"CategoriesCell",bundle:nil), forCellReuseIdentifier: "CategoriesCell")
         
+        tableView.contentInset = UIEdgeInsets(top: -35, left: 0, bottom: 0, right: 0)
     
        
 //        navigationItem.titleView = segmentedControl
@@ -39,21 +41,7 @@ class HomePageVC: UIViewController , UITableViewDelegate , UITableViewDataSource
         ad.saveUserLogginData(mobileNum: nil, uid: nil, name: nil)
         ad.reloadWithAnimationToRegister()
     }
-    @objc func changeIndex(segmentedControl: MXSegmentedControl) {
-        
-        self.selectedShop = data[segmentedControl.selectedIndex]
-        self.tableView.reloadData()
-//        switch segmentedControl.selectedIndex {
-//        case 0:
-//            segmentedControl.indicator.lineView.backgroundColor = #colorLiteral(red: 0.9568627451, green: 0.4392156863, blue: 0.3803921569, alpha: 1)
-//        case 1:
-//            segmentedControl.indicator.lineView.backgroundColor = #colorLiteral(red: 0.2044631541, green: 0.7111002803, blue: 0.898917675, alpha: 1)
-//        case 2:
-//            segmentedControl.indicator.lineView.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
-//        default:
-//            break
-//        }
-    }
+ 
     
     func setupDataM() {
         
@@ -84,6 +72,7 @@ class HomePageVC: UIViewController , UITableViewDelegate , UITableViewDataSource
                 if rData.count >= 1 {
                 self.selectedShop = self.data[0]
                 }
+                /*
                 for x in self.data {
                     self.segmentedControl.append(title: x.brandName)
                         .set(title: #colorLiteral(red: 0.09810762852, green: 0.2034293413, blue: 0.2315387726, alpha: 1), for: .selected)
@@ -92,6 +81,7 @@ class HomePageVC: UIViewController , UITableViewDelegate , UITableViewDataSource
                 self.segmentedControl.addTarget(self, action: #selector(self.changeIndex(segmentedControl:)), for: .valueChanged)
 //                self.view.showSimpleAlert("Netwo", "", .error)
                 self.segmentedControl.setNeedsLayout()
+                 */
                 self.tableView.reloadData()
 
             }
@@ -116,34 +106,70 @@ class HomePageVC: UIViewController , UITableViewDelegate , UITableViewDataSource
 //            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return selectedShop?.fittedClothesData.count ?? 0
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.data.count
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data[section].isOpened ? self.data[section].fittedClothesData.count + 1 ?? 0 : 1
+     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCell", for: indexPath) as! CategoriesCell
-        guard let data = selectedShop?.fittedClothesData else { return cell }
-        cell.configCell(data: data[indexPath.row])
-        cell.selectionStyle = .none
+        
+        guard indexPath.row == 0 else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCell", for: indexPath) as! CategoriesCell
+            let data = self.data[indexPath.section].fittedClothesData
+            cell.configCell(data: data[indexPath.row - 1 ])
+            cell.selectionStyle = .none
+            return cell
+         }
+        tableView.register(UINib(nibName:"BrandsCell",bundle:nil), forCellReuseIdentifier: "BrandsCell")
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BrandsCell", for: indexPath) as! BrandsCell
+//        cell.textLabel?.text = data[indexPath.section].brandName
+        cell.imageV.image = nil 
+        cell.imageV.image = brandImages[indexPath.section]
         return cell
     }
 
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let imgV = UIImageView(image: UIImage(named:"img_brand"))
-        imgV.contentMode = .scaleToFill
-        return imgV
-    }
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let imgV = UIImageView(image: UIImage(named:"img_brand"))
+//        imgV.contentMode = .scaleToFill
+//        return imgV
+//    }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return self.view.frame.width * 0.85
-    }
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return self.view.frame.width * 0.85
+//    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let dataSel = self.selectedShop?.fittedClothesData[indexPath.row] else { return }
+        guard indexPath.row == 0 else {
+          let dataSel = self.data[indexPath.section].fittedClothesData[indexPath.row - 1]
         let vc = ItemDetailsVC()
-        vc.title = selectedShop?.fittedClothesData[indexPath.row].piece_name
+        vc.title = dataSel.piece_name
         vc.data = dataSel
-        self.navigationController?.pushViewController(vc, animated: true    )
+        self.navigationController?.pushViewController(vc, animated: true)
+            return
+        }
+        if  self.data[indexPath.section].isOpened {
+             self.data[indexPath.section].isOpened = false
+            let section = IndexSet.init(integer: indexPath.section)
+            tableView.reloadSections(section, with: .none)
+        }else {
+            self.data[indexPath.section].isOpened = true
+            let section = IndexSet.init(integer: indexPath.section)
+            tableView.reloadSections(section, with: .none)
+
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        guard indexPath.row == 0 else {
+            
+            return 64.5
+        }
+        return 100
     }
     /*
     // MARK: - Navigation
