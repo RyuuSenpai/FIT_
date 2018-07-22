@@ -20,6 +20,7 @@ pod 'MXSegmentedControl'
     pod 'FBSDKShareKit'
    pod 'Google/SignIn'
     pod 'Firebase/Core'
+    pod 'Firebase/Messaging'
 
    pod 'AlamofireImage', '~> 3.3'
 end

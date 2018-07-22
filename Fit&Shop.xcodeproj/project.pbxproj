@@ -17,6 +17,10 @@
 		8428F13F20BA1172008310D6 /* NextBtnTableVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8428F13D20BA1172008310D6 /* NextBtnTableVCell.xib */; };
 		8428F14220BA1658008310D6 /* GuideViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428F14120BA1658008310D6 /* GuideViewC.swift */; };
 		8428F14320BA165D008310D6 /* GuideViewC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8428F14020BA1658008310D6 /* GuideViewC.xib */; };
+		F3011EB02103DFEC0005307C /* NewsFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3011EAF2103DFEB0005307C /* NewsFeedVC.swift */; };
+		F3011EB42103E0A00005307C /* NewsFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3011EB32103E0A00005307C /* NewsFeedCell.swift */; };
+		F3011EB62103E16F0005307C /* NewsFeedsDetailsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3011EB52103E16F0005307C /* NewsFeedsDetailsData.swift */; };
+		F3011EBA21040A500005307C /* launchBackGround.png in Resources */ = {isa = PBXBuildFile; fileRef = F3011EB921040A500005307C /* launchBackGround.png */; };
 		F3287400209FC44B004CCB33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32873FF209FC44B004CCB33 /* AppDelegate.swift */; };
 		F3287402209FC44B004CCB33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3287401209FC44B004CCB33 /* ViewController.swift */; };
 		F3287405209FC44B004CCB33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3287403209FC44B004CCB33 /* Main.storyboard */; };
@@ -75,6 +79,11 @@
 		8428F14120BA1658008310D6 /* GuideViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewC.swift; sourceTree = "<group>"; };
 		B2310A097003C4327DC50366 /* Pods-Fit&Shop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fit&Shop.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fit&Shop/Pods-Fit&Shop.release.xcconfig"; sourceTree = "<group>"; };
 		DBB9BA608B89017EC69F6CE6 /* Pods_Fit_Shop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fit_Shop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3011EAF2103DFEB0005307C /* NewsFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedVC.swift; sourceTree = "<group>"; };
+		F3011EB32103E0A00005307C /* NewsFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedCell.swift; sourceTree = "<group>"; };
+		F3011EB52103E16F0005307C /* NewsFeedsDetailsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedsDetailsData.swift; sourceTree = "<group>"; };
+		F3011EB82103FF6C0005307C /* Fit&Shop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Fit&Shop.entitlements"; sourceTree = "<group>"; };
+		F3011EB921040A500005307C /* launchBackGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchBackGround.png; sourceTree = "<group>"; };
 		F32873FC209FC44B004CCB33 /* Fit&Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fit&Shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F32873FF209FC44B004CCB33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3287401209FC44B004CCB33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -158,14 +167,81 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		F32873F3209FC44B004CCB33 = {
+		F3008C1D21038B6A00DB6F63 /* M */ = {
 			isa = PBXGroup;
 			children = (
+				F391FEC520A11D61005AE220 /* Post_Requests.swift */,
+				F391FECB20A2340C005AE220 /* Data_Model.swift */,
+				F3011EB52103E16F0005307C /* NewsFeedsDetailsData.swift */,
+				F391FEC920A11D85005AE220 /* Connection.swift */,
+				F391FEC720A11D78005AE220 /* Constant.swift */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		F3008C1E21038BA600DB6F63 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				F3011EB72103E2E10005307C /* New_Feeds */,
+				F37822FD20FC171000BD0BB3 /* BrandCell.swift */,
+				F328743E20A10522004CCB33 /* CategoriesCell.swift */,
+				F328743F20A10522004CCB33 /* CategoriesCell.xib */,
+				F328741520A0DD76004CCB33 /* BodyMeasurementCell.swift */,
+				F328741620A0DD76004CCB33 /* BodyMeasurementCell.xib */,
+				F328741920A0E014004CCB33 /* BodyMeasurementVC.swift */,
+				F3011EAE210393F40005307C /* Profile */,
+				F328744220A11453004CCB33 /* Login + RegisterationVC.swift */,
 				F378230320FE7AD900BD0BB3 /* AboutUsVC.swift */,
 				F378230420FE7AD900BD0BB3 /* AboutUsVC.xib */,
 				F328743C20A10136004CCB33 /* HomePageVC.swift */,
 				F378230720FE7AD900BD0BB3 /* BrandsCell.swift */,
 				F378230820FE7AD900BD0BB3 /* BrandsCell.xib */,
+				8428F13C20BA1172008310D6 /* NextBtnTableVCell.swift */,
+				8428F13D20BA1172008310D6 /* NextBtnTableVCell.xib */,
+				8428F13320B9F1BA008310D6 /* BodyMeasureVC.swift */,
+				8428F14120BA1658008310D6 /* GuideViewC.swift */,
+				8428F14020BA1658008310D6 /* GuideViewC.xib */,
+				84072CEF20B849B200B7D01A /* RegisterVC.swift */,
+				84072CF020B849B200B7D01A /* RegisterVC.xib */,
+				F328744420A11762004CCB33 /* ReloadApp.swift */,
+				F328742320A0F951004CCB33 /* ItemDetailsVC.swift */,
+				F328742420A0F951004CCB33 /* ItemDetailsVC.xib */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		F3011EAD210393E10005307C /* Profile_Tree */ = {
+			isa = PBXGroup;
+			children = (
+				F378230B20FE7AD900BD0BB3 /* EditProfileVC.swift */,
+				F378230C20FE7AD900BD0BB3 /* EditProfileVC.xib */,
+			);
+			path = Profile_Tree;
+			sourceTree = "<group>";
+		};
+		F3011EAE210393F40005307C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F37822FF20FC2CF200BD0BB3 /* ProfileVC.swift */,
+				F378230120FC2D7000BD0BB3 /* ProfileCell.swift */,
+				F3011EAD210393E10005307C /* Profile_Tree */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		F3011EB72103E2E10005307C /* New_Feeds */ = {
+			isa = PBXGroup;
+			children = (
+				F3011EAF2103DFEB0005307C /* NewsFeedVC.swift */,
+				F3011EB32103E0A00005307C /* NewsFeedCell.swift */,
+			);
+			path = New_Feeds;
+			sourceTree = "<group>";
+		};
+		F32873F3209FC44B004CCB33 = {
+			isa = PBXGroup;
+			children = (
+				84072CF720B8523700B7D01A /* AppDelegate */,
 				F32873FE209FC44B004CCB33 /* Fit&Shop */,
 				F32873FD209FC44B004CCB33 /* Products */,
 				39A23A038B3031BDB6B1D870 /* Pods */,
@@ -184,38 +260,16 @@
 		F32873FE209FC44B004CCB33 /* Fit&Shop */ = {
 			isa = PBXGroup;
 			children = (
-				F378230B20FE7AD900BD0BB3 /* EditProfileVC.swift */,
-				F378230C20FE7AD900BD0BB3 /* EditProfileVC.xib */,
-				8428F13C20BA1172008310D6 /* NextBtnTableVCell.swift */,
-				8428F13D20BA1172008310D6 /* NextBtnTableVCell.xib */,
-				8428F13320B9F1BA008310D6 /* BodyMeasureVC.swift */,
-				8428F14120BA1658008310D6 /* GuideViewC.swift */,
-				8428F14020BA1658008310D6 /* GuideViewC.xib */,
-				84072CF720B8523700B7D01A /* AppDelegate */,
-				84072CEF20B849B200B7D01A /* RegisterVC.swift */,
-				84072CF020B849B200B7D01A /* RegisterVC.xib */,
-				F328744420A11762004CCB33 /* ReloadApp.swift */,
-				F328742320A0F951004CCB33 /* ItemDetailsVC.swift */,
+				F3011EB82103FF6C0005307C /* Fit&Shop.entitlements */,
+				F3008C1E21038BA600DB6F63 /* C */,
 				84072CF520B8519D00B7D01A /* UIViewControllerExt.swift */,
-				F328742420A0F951004CCB33 /* ItemDetailsVC.xib */,
-				F391FECB20A2340C005AE220 /* Data_Model.swift */,
 				F328741F20A0F154004CCB33 /* MyExtensions.swift */,
 				F3287401209FC44B004CCB33 /* ViewController.swift */,
-				F391FEC920A11D85005AE220 /* Connection.swift */,
-				F391FEC720A11D78005AE220 /* Constant.swift */,
-				F391FEC520A11D61005AE220 /* Post_Requests.swift */,
+				F3008C1D21038B6A00DB6F63 /* M */,
 				F3287403209FC44B004CCB33 /* Main.storyboard */,
-				F37822FD20FC171000BD0BB3 /* BrandCell.swift */,
-				F328744220A11453004CCB33 /* Login + RegisterationVC.swift */,
-				F328743E20A10522004CCB33 /* CategoriesCell.swift */,
-				F328743F20A10522004CCB33 /* CategoriesCell.xib */,
-				F328741520A0DD76004CCB33 /* BodyMeasurementCell.swift */,
-				F328741620A0DD76004CCB33 /* BodyMeasurementCell.xib */,
-				F328741920A0E014004CCB33 /* BodyMeasurementVC.swift */,
 				F3287406209FC44B004CCB33 /* Assets.xcassets */,
-				F37822FF20FC2CF200BD0BB3 /* ProfileVC.swift */,
-				F378230120FC2D7000BD0BB3 /* ProfileCell.swift */,
 				F3287408209FC44B004CCB33 /* LaunchScreen.storyboard */,
+				F3011EB921040A500005307C /* launchBackGround.png */,
 				F328742720A0FCB9004CCB33 /* DesignableX */,
 				F328741120A0D94D004CCB33 /* NEO SANS ARABIC BOLD.TTF */,
 				F328741220A0D94D004CCB33 /* NEOSANSARABIC.TTF */,
@@ -279,6 +333,11 @@
 					F32873FB209FC44B004CCB33 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -318,6 +377,7 @@
 				F328741320A0D94D004CCB33 /* NEO SANS ARABIC BOLD.TTF in Resources */,
 				8428F13F20BA1172008310D6 /* NextBtnTableVCell.xib in Resources */,
 				F328741820A0DD76004CCB33 /* BodyMeasurementCell.xib in Resources */,
+				F3011EBA21040A500005307C /* launchBackGround.png in Resources */,
 				8428F12E20B979B2008310D6 /* GoogleService-Info.plist in Resources */,
 				F3287405209FC44B004CCB33 /* Main.storyboard in Resources */,
 				84072CF220B849B200B7D01A /* RegisterVC.xib in Resources */,
@@ -338,7 +398,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -365,6 +425,7 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/MXSegmentedControl/MXSegmentedControl.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SSSlider/SSSlider.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -385,6 +446,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MXSegmentedControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSSlider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -424,14 +486,17 @@
 				F328743B20A0FCB9004CCB33 /* UIVisualEffectViewX.swift in Sources */,
 				F328743620A0FCB9004CCB33 /* UITextFieldX.swift in Sources */,
 				8428F13E20BA1172008310D6 /* NextBtnTableVCell.swift in Sources */,
+				F3011EB02103DFEC0005307C /* NewsFeedVC.swift in Sources */,
 				F378230220FC2D7000BD0BB3 /* ProfileCell.swift in Sources */,
 				F328744520A11763004CCB33 /* ReloadApp.swift in Sources */,
 				F328742020A0F154004CCB33 /* MyExtensions.swift in Sources */,
+				F3011EB42103E0A00005307C /* NewsFeedCell.swift in Sources */,
 				F391FECC20A2340C005AE220 /* Data_Model.swift in Sources */,
 				F328743A20A0FCB9004CCB33 /* UIViewXRadialGradient.swift in Sources */,
 				F328742520A0F951004CCB33 /* ItemDetailsVC.swift in Sources */,
 				F328741C20A0E106004CCB33 /* FontExtension.swift in Sources */,
 				F3287402209FC44B004CCB33 /* ViewController.swift in Sources */,
+				F3011EB62103E16F0005307C /* NewsFeedsDetailsData.swift in Sources */,
 				F378230920FE7AD900BD0BB3 /* BrandsCell.swift in Sources */,
 				F328744020A10522004CCB33 /* CategoriesCell.swift in Sources */,
 				F328743720A0FCB9004CCB33 /* UIViewAnchorPoint.swift in Sources */,
@@ -593,9 +658,11 @@
 			baseConfigurationReference = 6BCF83F14B4C9147B7B23C22 /* Pods-Fit&Shop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Fit&Shop/Fit&Shop.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YKSLKY2D83;
 				INFOPLIST_FILE = "$(SRCROOT)/Fit&Shop/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZeOwls.FitAndShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -609,9 +676,11 @@
 			baseConfigurationReference = B2310A097003C4327DC50366 /* Pods-Fit&Shop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Fit&Shop/Fit&Shop.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YKSLKY2D83;
 				INFOPLIST_FILE = "$(SRCROOT)/Fit&Shop/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZeOwls.FitAndShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
