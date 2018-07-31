@@ -34,7 +34,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>0.2</string>
+	<string>0.3</string>
 	<key>FacebookAppID</key>
 	<string>218929132038450</string>
 	<key>FacebookDisplayName</key>
@@ -48,6 +48,22 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>localhost</key>
+			<string></string>
+		</dict>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>take a profile picture</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This app uses your Microphone to allow Voice over IP communication with the Program Admin system</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>pick a profile picture</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>NEO SANS ARABIC BOLD.TTF</string>

@@ -81,6 +81,111 @@ class  Post_Requests : Connection {
  
     }
     
+       var alamoFireManager : SessionManager? // this line
+    func editImage_requestURl( image:UIImage? ,success : @escaping (String) -> () ,failure failed: @escaping (String?)->() ) {
+        
+        print(Connection.URLS_Post_Enum.edit_Image.stringValue())
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForRequest = 60
+        configuration.timeoutIntervalForResource = 60
+        alamoFireManager = Alamofire.SessionManager(configuration: configuration) // not in this line
+
+//        let image = UIImage.init(named: "myImage")
+        let imgData = UIImageJPEGRepresentation(image!, 0.2)!
+        
+ //Alamofire.upload
+        alamoFireManager?.upload(multipartFormData: { multipartFormData in
+            multipartFormData.append(imgData, withName: "fileset",fileName: "file.jpg", mimeType: "image/jpg")
+//            for (key, value) in parameters {
+//                multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)
+//            } //Optional for extra parameters
+        },
+                         to:Connection.URLS_Post_Enum.edit_Image.stringValue())
+        { (result) in
+            switch result {
+            case .success(let upload, _, _):
+
+                upload.uploadProgress(closure: { (progress) in
+                    print("Upload Progress: \(progress.fractionCompleted)")
+                })
+
+                upload.responseJSON { response in
+                    print(response.result.value)
+                    success("Done")
+                }
+
+            case .failure(let encodingError):
+                print(encodingError.localizedDescription)
+                failed("Failed")
+            }
+        }
+
+        
+//        alamoFireManager?.upload(multipartFormData: { (multipartFormData) in
+//
+//            if let image = image
+//            {
+//                if let imageData = UIImageJPEGRepresentation(image, 1) {
+//                    //                    multipartFormData.append(imageData, withName: key, fileName: "file.jpeg", mimeType: "image/jpeg")
+//                    multipartFormData.append(imageData, withName: "image", fileName: "swift_file.jpg", mimeType: "image/jpg")
+//                }
+//            }
+//
+////            for (key, value) in parameters {
+////                //                multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key as String)
+////                multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
+////            }
+//        }, to:Connection.URLS_Post_Enum.edit_Image.stringValue(), method: .post, headers: nil)
+//        { (result) in
+//            switch result {
+//            case .success(let upload, _, _):
+//
+//                //                upload.uploadProgress(closure: { (Progress) in
+//                //                    print("Upload Progress: \(Progress.fractionCompleted)")
+//                //                })
+//
+//                upload.responseJSON { response in
+//                    //self.delegate?.showSuccessAlert()
+//                    print("original URL request\n\(response.request)\n\n")  // original URL request
+//                    print("response \n:\(response.response)\n\n") // URL response
+//                    print("data :\n\(response.data)\n\n")      // server data
+//                    print("result :\n\(response.result)\n\n")    // result of response serialization
+//                    //                        self.showSuccesAlert()
+//                    //self.removeImage("frame", fileExtension: "txt")
+//
+//                    guard  let value = response.result.value  else {
+//                        print(response.result.error?.localizedDescription)
+//                        return
+//                    }
+//                    let json = JSON( value) // SwiftyJSON
+//                    print("that;s json \(json)")
+//
+//
+//                    let status = json["error"]["message"] != nil ? true : false
+//
+//                    //                    let status = statusCode == nil ? false : true
+//                    let sms = json["error"]["message"].string ?? json["error"]["message"].stringValue
+//
+//                    if(status)
+//                    {
+//                        failed(sms)
+//                    }
+//                    else {
+//
+//                        success( json["token"].stringValue)
+//                    }
+//                }
+//
+//            case .failure(let encodingError):
+//                //self.delegate?.showFailAlert()
+//                print(encodingError)
+//                failed("error")
+//            }
+//
+//        }
+    }
+    
+    
     func getUserData_request(completion:@escaping ( Profile_Details_M ) -> (),failure failed: @escaping (String?)->() ) {
         //http://45.55.134.13/api/v1/places/1/8/20
          //        print("lat is \(ad.latitude) lon is \(ad.longitude)")

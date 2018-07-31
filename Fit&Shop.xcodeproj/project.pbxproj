@@ -50,6 +50,9 @@
 		F328744120A10522004CCB33 /* CategoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F328743F20A10522004CCB33 /* CategoriesCell.xib */; };
 		F328744320A11453004CCB33 /* Login + RegisterationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F328744220A11453004CCB33 /* Login + RegisterationVC.swift */; };
 		F328744520A11763004CCB33 /* ReloadApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F328744420A11762004CCB33 /* ReloadApp.swift */; };
+		F35158AC210680FF007E70A6 /* Post_Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35158AB210680FF007E70A6 /* Post_Image.swift */; };
+		F35158AF210681E1007E70A6 /* Localization_Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35158AD210681E0007E70A6 /* Localization_Alerts.swift */; };
+		F35158B0210681E1007E70A6 /* LoclizationExConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35158AE210681E0007E70A6 /* LoclizationExConstant.swift */; };
 		F37822FE20FC171000BD0BB3 /* BrandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37822FD20FC171000BD0BB3 /* BrandCell.swift */; };
 		F378230020FC2CF200BD0BB3 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37822FF20FC2CF200BD0BB3 /* ProfileVC.swift */; };
 		F378230220FC2D7000BD0BB3 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F378230120FC2D7000BD0BB3 /* ProfileCell.swift */; };
@@ -114,6 +117,9 @@
 		F328743F20A10522004CCB33 /* CategoriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCell.xib; sourceTree = "<group>"; };
 		F328744220A11453004CCB33 /* Login + RegisterationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login + RegisterationVC.swift"; sourceTree = "<group>"; };
 		F328744420A11762004CCB33 /* ReloadApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadApp.swift; sourceTree = "<group>"; };
+		F35158AB210680FF007E70A6 /* Post_Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post_Image.swift; sourceTree = "<group>"; };
+		F35158AD210681E0007E70A6 /* Localization_Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization_Alerts.swift; sourceTree = "<group>"; };
+		F35158AE210681E0007E70A6 /* LoclizationExConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoclizationExConstant.swift; sourceTree = "<group>"; };
 		F37822FD20FC171000BD0BB3 /* BrandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCell.swift; sourceTree = "<group>"; };
 		F37822FF20FC2CF200BD0BB3 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		F378230120FC2D7000BD0BB3 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
@@ -170,11 +176,14 @@
 		F3008C1D21038B6A00DB6F63 /* M */ = {
 			isa = PBXGroup;
 			children = (
+				F35158AB210680FF007E70A6 /* Post_Image.swift */,
 				F391FEC520A11D61005AE220 /* Post_Requests.swift */,
 				F391FECB20A2340C005AE220 /* Data_Model.swift */,
 				F3011EB52103E16F0005307C /* NewsFeedsDetailsData.swift */,
 				F391FEC920A11D85005AE220 /* Connection.swift */,
 				F391FEC720A11D78005AE220 /* Constant.swift */,
+				F35158AD210681E0007E70A6 /* Localization_Alerts.swift */,
+				F35158AE210681E0007E70A6 /* LoclizationExConstant.swift */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -483,12 +492,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F378230520FE7AD900BD0BB3 /* AboutUsVC.swift in Sources */,
+				F35158B0210681E1007E70A6 /* LoclizationExConstant.swift in Sources */,
 				F328743B20A0FCB9004CCB33 /* UIVisualEffectViewX.swift in Sources */,
 				F328743620A0FCB9004CCB33 /* UITextFieldX.swift in Sources */,
+				F35158AC210680FF007E70A6 /* Post_Image.swift in Sources */,
 				8428F13E20BA1172008310D6 /* NextBtnTableVCell.swift in Sources */,
 				F3011EB02103DFEC0005307C /* NewsFeedVC.swift in Sources */,
 				F378230220FC2D7000BD0BB3 /* ProfileCell.swift in Sources */,
 				F328744520A11763004CCB33 /* ReloadApp.swift in Sources */,
+				F35158AF210681E1007E70A6 /* Localization_Alerts.swift in Sources */,
 				F328742020A0F154004CCB33 /* MyExtensions.swift in Sources */,
 				F3011EB42103E0A00005307C /* NewsFeedCell.swift in Sources */,
 				F391FECC20A2340C005AE220 /* Data_Model.swift in Sources */,

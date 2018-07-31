@@ -13,12 +13,16 @@ class ProfileVC: UIViewController  , UICollectionViewDelegate , UICollectionView
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var emailLbl: UILabel!
+    @IBOutlet weak var profileImgV: UIImageView!
     
+    var updatedImg : UIImage?
     var imgDict : [(String , UIImage)]!
     var profileData : Profile_Details_M? {
         didSet {
             nameLbl?.text = profileData?.fullName ?? ""
             emailLbl?.text = profileData?.email ?? ""
+            guard let imgS = profileData?.image else { return }
+            self.profileImgV?.setupApiImage(imagePath: imgS, placeHolderImg: UIImage(named:"ic_profile_pic_")! )
         }
     }
 
@@ -55,7 +59,17 @@ class ProfileVC: UIViewController  , UICollectionViewDelegate , UICollectionView
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
 
+        if let img = updatedImg  {
+            self.profileImgV.image = img 
+        }
         
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        self.profileImgV.layer.cornerRadius = self.profileImgV.frame.width / 2
+        self.profileImgV.layer.masksToBounds = false
+        self.profileImgV.clipsToBounds = true 
     }
  
     
@@ -93,6 +107,7 @@ class ProfileVC: UIViewController  , UICollectionViewDelegate , UICollectionView
         case 0 :
             let vc = EditProfileVC()
             vc.data = self.profileData
+            vc.delegate = self 
             self.navigationController?.pushViewController(vc, animated: true )
         case 4 :
             let vc = AboutUsVC()
@@ -110,4 +125,14 @@ class ProfileVC: UIViewController  , UICollectionViewDelegate , UICollectionView
     }
     
  
+}
+
+extension ProfileVC : UpdatedProfilePic  {
+    
+    func hasUpdatedProfileImg(img : UIImage)
+    {
+        
+        updatedImg = img
+        
+    }
 }

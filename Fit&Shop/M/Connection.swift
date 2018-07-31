@@ -28,6 +28,7 @@ class Connection: NSObject {
         case fB_Login
         case edit_profile
         case register_device
+        case edit_Image
         func stringValue() -> String {
              switch self {
              case .login_User :
@@ -47,7 +48,8 @@ class Connection: NSObject {
                 return Constant.main_url + "User/edit_profile"
              case .register_device :
                 return Constant.main_url + "User/register_device"
-
+             case .edit_Image :
+                return Constant.main_url + "User/edit_user_image?UserID=\(ad.getUserID())"
             }
         }
     }
