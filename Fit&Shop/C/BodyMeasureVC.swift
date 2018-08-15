@@ -40,6 +40,7 @@ class BodyMeasureVC: UIViewController  , UITableViewDelegate , UITableViewDataSo
     @IBOutlet weak var pieceImgV: UIImageView!
     @IBOutlet weak var pieceUnderLineV: UIView!
     
+    @IBOutlet weak var btnsStackView: UIStackView!
     @IBOutlet weak var measurmentTypeLbl: UILabel!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var bodyLbl: UILabel!
@@ -59,7 +60,9 @@ class BodyMeasureVC: UIViewController  , UITableViewDelegate , UITableViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if L102Language.currentAppleLanguage() == "ar" {
+            self.btnsStackView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+        }
         
         tableView.delegate = self
         tableView.dataSource  = self

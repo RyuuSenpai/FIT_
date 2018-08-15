@@ -25,8 +25,13 @@ class Login___RegisterationVC: UIViewController , GIDSignInDelegate,GIDSignInUID
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.emailTxtF.placeholder = L0S.E_mail.stringValue()
+        self.passTxtF.placeholder = L0S.Password.stringValue()
+
+        self.emailTxtF.selectedTitle = L0S.E_mail.stringValue()
+        self.passTxtF.selectedTitle = L0S.Password.stringValue()
     }
-    
+ 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 //        animate()

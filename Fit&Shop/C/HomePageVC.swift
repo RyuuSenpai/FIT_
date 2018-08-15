@@ -152,6 +152,11 @@ class HomePageVC: UIViewController , UITableViewDelegate , UITableViewDataSource
         self.navigationController?.pushViewController(vc, animated: true)
             return
         }
+         let pData = self.data[indexPath.section].fittedClothesData
+        guard pData.count >= 1  else {
+            self.view.showSimpleAlert(L0A.Sorry.stringValue(), L0A.no_fit.stringValue(), .notification)
+            return
+        }
         if  self.data[indexPath.section].isOpened {
              self.data[indexPath.section].isOpened = false
             let section = IndexSet.init(integer: indexPath.section)

@@ -14,17 +14,26 @@ class Brands_DataModel {
     
     
    private  var _brand : String!
+    private  var _brand_ar : String!
    private  var _brand_id : Int!
     private var _fittedClothesData : [Piece_Data] = []
     var isOpened = Bool()
-    var brandName : String { return _brand }
-    var brandID : Int { return _brand_id}
+    var brandName : String {
+        if _brand_ar == "" {
+            _brand_ar = _brand
+        }
+        return L102Language.currentAppleLanguage() == "ar" ? _brand_ar : _brand
+     }
+    var brandID : Int {
+      
+        return _brand_id}
     
     var fittedClothesData : [Piece_Data] { return _fittedClothesData }
    
     init(json : JSON ) {
         
         self._brand = json["brand_name"].stringValue
+        self._brand_ar = json["brand_name_ar"].stringValue
         self._brand_id = json["brand_id"].intValue
 
         for x in json["fitted"] {
@@ -39,11 +48,18 @@ class Brands_DataModel {
 class Piece_Data {
     
     private var _sizes : [FittedClothesData] = []
-
+    private  var _piece_name_ar : String!
     private  var _piece_name : String!
     private  var _piece_id : Int!
     
-    var piece_name : String { return _piece_name }
+    var piece_name : String {
+         if _piece_name_ar == "" {
+            _piece_name_ar = _piece_name
+        }
+        return L102Language.currentAppleLanguage() == "ar" ? _piece_name_ar : _piece_name
+        }
+ 
+ 
     var piece_id : Int { return _piece_id }
     
     var sizes : [FittedClothesData] { return _sizes }
@@ -51,6 +67,7 @@ class Piece_Data {
     init(json : JSON ) {
         
         self._piece_name = json["piece_name"].stringValue
+        self._piece_name_ar = json["piece_name_ar"].stringValue
         self._piece_id = json["piece_id"].intValue
         
         for x in json["sizes"] {
@@ -74,12 +91,23 @@ class  FittedClothesData {
      private   var _waist : Double!
     private var _desc : String!
     private   var _id : Int!
-
-    var desc : String { return _desc }
+    private  var _piece_ar : String!
+ private var _desc_ar : String!
+    var desc : String {
+        if _desc_ar == "" {
+            _desc_ar = _desc
+        }
+        return L102Language.currentAppleLanguage() == "ar" ? _desc_ar : _desc
+    }
     var chest : Double { return _chest }
     var hips : Double { return _hips}
     var length : Double { return _length}
-    var piece : String { return _piece}
+    var piece : String {
+        if _piece_ar == "" {
+            _piece_ar = _piece
+        }
+        return L102Language.currentAppleLanguage() == "ar" ? _piece_ar : _piece
+    }
     var piece_id : Int{ return _piece_id}
     var size : String{ return _size}
     var size_id : Int{ return _size_id}
@@ -100,6 +128,9 @@ class  FittedClothesData {
         self._size_id = json["size_id"].intValue
         self._waist = json["waist"].doubleValue
         self._id = json["id"].intValue
+        self._desc_ar = json["desc_ar"].stringValue
+        
+   self._piece_ar = json["piece_ar"].stringValue
     }
  
 }

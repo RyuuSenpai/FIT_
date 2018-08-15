@@ -38,6 +38,7 @@ enum ClothesType : Int  {
 
 class ItemDetailsVC: UIViewController {
 
+    @IBOutlet weak var backBtnImgV: UIImageView!
     @IBOutlet weak var pageTitle: UILabel!
     @IBOutlet weak var imageV: UIImageView!
     @IBOutlet weak var bodyLbl: UILabel!
@@ -78,7 +79,9 @@ class ItemDetailsVC: UIViewController {
 //        bodyLbl.text = smallSTxt
       imageV.image =   ClothesType.init(rawValue: data.piece_id)?.setupImage()
         
-        
+        if L102Language.currentAppleLanguage() == "ar" {
+            self.backBtnImgV.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+        }
     }
     
     

@@ -15,14 +15,17 @@ class CategoriesCell: UITableViewCell {
     @IBOutlet weak var sizeLbl1: UILabelX!
     @IBOutlet weak var sizeLbl2: UILabelX!
     @IBOutlet weak var sizesStackView: UIStackView!
-    
+    @IBOutlet weak var backBtnImgV: UIImageView!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         sizeLbl1.alpha = 0
         sizeLbl2.alpha = 0
-        
+        if L102Language.currentAppleLanguage() == "ar" {
+            self.backBtnImgV.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+        }
     }
     
    

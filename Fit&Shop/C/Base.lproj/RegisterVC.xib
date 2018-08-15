@@ -10,12 +10,18 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="GE_SS_Two_Medium.otf">
+            <string>GESSTwoMedium-Medium</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterVC" customModule="Fit_Shop" customModuleProvider="target">
             <connections>
                 <outlet property="emailTxtF" destination="yMb-4f-5zU" id="1Ly-D7-ThN"/>
                 <outlet property="femaleImgV" destination="f1T-1j-Vvx" id="gbB-UI-KOR"/>
                 <outlet property="firstNameTxtF" destination="1PZ-9r-eEi" id="MJS-ib-6H3"/>
+                <outlet property="imgBackView" destination="oPN-vR-sQZ" id="HXu-mI-N1y"/>
                 <outlet property="maleImgV" destination="9Fh-sn-9dq" id="FHe-tz-uYx"/>
                 <outlet property="mobileNumTxtF" destination="z8N-CA-1lo" id="MGc-fX-Mhv"/>
                 <outlet property="passTxtF" destination="W7P-U0-WrM" id="YDU-SK-SZM"/>
@@ -76,10 +82,10 @@
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dRr-wK-BCu">
-                                            <rect key="frame" x="20" y="117" width="260" height="181"/>
+                                            <rect key="frame" x="20" y="154" width="260" height="144"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1PZ-9r-eEi" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="39.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
                                                     <color key="tintColor" red="0.91498976949999999" green="0.3476445675" blue="0.37298086289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -105,7 +111,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yMb-4f-5zU" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                                    <rect key="frame" x="0.0" y="47.5" width="260" height="39"/>
+                                                    <rect key="frame" x="0.0" y="38" width="260" height="30"/>
                                                     <color key="tintColor" red="0.91498976949999999" green="0.3476445675" blue="0.37298086289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -131,7 +137,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W7P-U0-WrM" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                                    <rect key="frame" x="0.0" y="94.5" width="260" height="39.5"/>
+                                                    <rect key="frame" x="0.0" y="76" width="260" height="30"/>
                                                     <color key="tintColor" red="0.91498976949999999" green="0.3476445675" blue="0.37298086289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -157,7 +163,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z8N-CA-1lo" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                                    <rect key="frame" x="0.0" y="142" width="260" height="39"/>
+                                                    <rect key="frame" x="0.0" y="114" width="260" height="30"/>
                                                     <color key="tintColor" red="0.91498976949999999" green="0.3476445675" blue="0.37298086289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -258,7 +264,7 @@
                                                 <constraint firstItem="oJd-Ei-SgJ" firstAttribute="leading" secondItem="f1T-1j-Vvx" secondAttribute="trailing" constant="8" id="zlM-wC-FfQ"/>
                                             </constraints>
                                         </view>
-                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKE-uw-dQr" customClass="UIButtonX" customModule="Fit_Shop" customModuleProvider="target">
+                                        <button opaque="NO" clipsSubviews="YES" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKE-uw-dQr" customClass="UIButtonX" customModule="Fit_Shop" customModuleProvider="target">
                                             <rect key="frame" x="60" y="420" width="180" height="30"/>
                                             <color key="backgroundColor" red="0.96867972609999997" green="0.57862693070000004" blue="0.1157050505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -336,7 +342,7 @@
                 <constraint firstItem="1Nq-uw-2Ml" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xHL-3Q-D9j"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="24.5" y="383.5"/>
+            <point key="canvasLocation" x="152" y="291"/>
         </view>
     </objects>
     <resources>

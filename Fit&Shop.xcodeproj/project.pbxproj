@@ -9,14 +9,15 @@
 /* Begin PBXBuildFile section */
 		3277148A89B20B145966EF31 /* Pods_Fit_Shop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB9BA608B89017EC69F6CE6 /* Pods_Fit_Shop.framework */; };
 		84072CF120B849B200B7D01A /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84072CEF20B849B200B7D01A /* RegisterVC.swift */; };
-		84072CF220B849B200B7D01A /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84072CF020B849B200B7D01A /* RegisterVC.xib */; };
 		84072CF620B8519D00B7D01A /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84072CF520B8519D00B7D01A /* UIViewControllerExt.swift */; };
 		8428F12E20B979B2008310D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8428F12D20B979B2008310D6 /* GoogleService-Info.plist */; };
 		8428F13420B9F1BA008310D6 /* BodyMeasureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428F13320B9F1BA008310D6 /* BodyMeasureVC.swift */; };
 		8428F13E20BA1172008310D6 /* NextBtnTableVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428F13C20BA1172008310D6 /* NextBtnTableVCell.swift */; };
-		8428F13F20BA1172008310D6 /* NextBtnTableVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8428F13D20BA1172008310D6 /* NextBtnTableVCell.xib */; };
 		8428F14220BA1658008310D6 /* GuideViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428F14120BA1658008310D6 /* GuideViewC.swift */; };
-		8428F14320BA165D008310D6 /* GuideViewC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8428F14020BA1658008310D6 /* GuideViewC.xib */; };
+		F30054552123871E00664FFD /* L102Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30054512123871900664FFD /* L102Language.swift */; };
+		F30054562123871E00664FFD /* L012Localizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30054522123871A00664FFD /* L012Localizer.swift */; };
+		F30054572123871E00664FFD /* MirroringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30054532123871C00664FFD /* MirroringLabel.swift */; };
+		F30054582123871E00664FFD /* MirroringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30054542123871D00664FFD /* MirroringViewController.swift */; };
 		F3011EB02103DFEC0005307C /* NewsFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3011EAF2103DFEB0005307C /* NewsFeedVC.swift */; };
 		F3011EB42103E0A00005307C /* NewsFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3011EB32103E0A00005307C /* NewsFeedCell.swift */; };
 		F3011EB62103E16F0005307C /* NewsFeedsDetailsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3011EB52103E16F0005307C /* NewsFeedsDetailsData.swift */; };
@@ -29,12 +30,10 @@
 		F328741320A0D94D004CCB33 /* NEO SANS ARABIC BOLD.TTF in Resources */ = {isa = PBXBuildFile; fileRef = F328741120A0D94D004CCB33 /* NEO SANS ARABIC BOLD.TTF */; };
 		F328741420A0D94D004CCB33 /* NEOSANSARABIC.TTF in Resources */ = {isa = PBXBuildFile; fileRef = F328741220A0D94D004CCB33 /* NEOSANSARABIC.TTF */; };
 		F328741720A0DD76004CCB33 /* BodyMeasurementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F328741520A0DD76004CCB33 /* BodyMeasurementCell.swift */; };
-		F328741820A0DD76004CCB33 /* BodyMeasurementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F328741620A0DD76004CCB33 /* BodyMeasurementCell.xib */; };
 		F328741A20A0E014004CCB33 /* BodyMeasurementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F328741920A0E014004CCB33 /* BodyMeasurementVC.swift */; };
 		F328741C20A0E106004CCB33 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F328741B20A0E106004CCB33 /* FontExtension.swift */; };
 		F328742020A0F154004CCB33 /* MyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F328741F20A0F154004CCB33 /* MyExtensions.swift */; };
 		F328742520A0F951004CCB33 /* ItemDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F328742320A0F951004CCB33 /* ItemDetailsVC.swift */; };
-		F328742620A0F951004CCB33 /* ItemDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F328742420A0F951004CCB33 /* ItemDetailsVC.xib */; };
 		F328743220A0FCB9004CCB33 /* UIButtonX.swift in Sources */ = {isa = PBXBuildFile; fileRef = F328742820A0FCB9004CCB33 /* UIButtonX.swift */; };
 		F328743320A0FCB9004CCB33 /* UIImageViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = F328742920A0FCB9004CCB33 /* UIImageViewX.swift */; };
 		F328743420A0FCB9004CCB33 /* UILabelX.swift in Sources */ = {isa = PBXBuildFile; fileRef = F328742A20A0FCB9004CCB33 /* UILabelX.swift */; };
@@ -50,6 +49,12 @@
 		F328744120A10522004CCB33 /* CategoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F328743F20A10522004CCB33 /* CategoriesCell.xib */; };
 		F328744320A11453004CCB33 /* Login + RegisterationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F328744220A11453004CCB33 /* Login + RegisterationVC.swift */; };
 		F328744520A11763004CCB33 /* ReloadApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F328744420A11762004CCB33 /* ReloadApp.swift */; };
+		F3440ED42123A00900CA6303 /* BodyMeasurementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3440ED62123A00900CA6303 /* BodyMeasurementCell.xib */; };
+		F3440ED92123A03500CA6303 /* EditProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3440EDB2123A03500CA6303 /* EditProfileVC.xib */; };
+		F3440EE62123A23B00CA6303 /* NextBtnTableVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3440EE82123A23B00CA6303 /* NextBtnTableVCell.xib */; };
+		F3440EEB2123A32900CA6303 /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3440EED2123A32900CA6303 /* RegisterVC.xib */; };
+		F3440EF02123A3BB00CA6303 /* ItemDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3440EF22123A3BB00CA6303 /* ItemDetailsVC.xib */; };
+		F3440EF52123AA5300CA6303 /* GuideViewC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3440EF72123AA5300CA6303 /* GuideViewC.xib */; };
 		F35158AC210680FF007E70A6 /* Post_Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35158AB210680FF007E70A6 /* Post_Image.swift */; };
 		F35158AF210681E1007E70A6 /* Localization_Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35158AD210681E0007E70A6 /* Localization_Alerts.swift */; };
 		F35158B0210681E1007E70A6 /* LoclizationExConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35158AE210681E0007E70A6 /* LoclizationExConstant.swift */; };
@@ -61,7 +66,6 @@
 		F378230920FE7AD900BD0BB3 /* BrandsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F378230720FE7AD900BD0BB3 /* BrandsCell.swift */; };
 		F378230A20FE7AD900BD0BB3 /* BrandsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F378230820FE7AD900BD0BB3 /* BrandsCell.xib */; };
 		F378230D20FE7AD900BD0BB3 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F378230B20FE7AD900BD0BB3 /* EditProfileVC.swift */; };
-		F378230E20FE7AD900BD0BB3 /* EditProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F378230C20FE7AD900BD0BB3 /* EditProfileVC.xib */; };
 		F391FEC620A11D61005AE220 /* Post_Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391FEC520A11D61005AE220 /* Post_Requests.swift */; };
 		F391FEC820A11D79005AE220 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391FEC720A11D78005AE220 /* Constant.swift */; };
 		F391FECA20A11D85005AE220 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F391FEC920A11D85005AE220 /* Connection.swift */; };
@@ -72,16 +76,17 @@
 /* Begin PBXFileReference section */
 		6BCF83F14B4C9147B7B23C22 /* Pods-Fit&Shop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fit&Shop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fit&Shop/Pods-Fit&Shop.debug.xcconfig"; sourceTree = "<group>"; };
 		84072CEF20B849B200B7D01A /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
-		84072CF020B849B200B7D01A /* RegisterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
 		84072CF520B8519D00B7D01A /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		8428F12D20B979B2008310D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8428F13320B9F1BA008310D6 /* BodyMeasureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyMeasureVC.swift; sourceTree = "<group>"; };
 		8428F13C20BA1172008310D6 /* NextBtnTableVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextBtnTableVCell.swift; sourceTree = "<group>"; };
-		8428F13D20BA1172008310D6 /* NextBtnTableVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NextBtnTableVCell.xib; sourceTree = "<group>"; };
-		8428F14020BA1658008310D6 /* GuideViewC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuideViewC.xib; sourceTree = "<group>"; };
 		8428F14120BA1658008310D6 /* GuideViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewC.swift; sourceTree = "<group>"; };
 		B2310A097003C4327DC50366 /* Pods-Fit&Shop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fit&Shop.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fit&Shop/Pods-Fit&Shop.release.xcconfig"; sourceTree = "<group>"; };
 		DBB9BA608B89017EC69F6CE6 /* Pods_Fit_Shop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fit_Shop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F30054512123871900664FFD /* L102Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L102Language.swift; sourceTree = "<group>"; };
+		F30054522123871A00664FFD /* L012Localizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L012Localizer.swift; sourceTree = "<group>"; };
+		F30054532123871C00664FFD /* MirroringLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MirroringLabel.swift; sourceTree = "<group>"; };
+		F30054542123871D00664FFD /* MirroringViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MirroringViewController.swift; sourceTree = "<group>"; };
 		F3011EAF2103DFEB0005307C /* NewsFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedVC.swift; sourceTree = "<group>"; };
 		F3011EB32103E0A00005307C /* NewsFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedCell.swift; sourceTree = "<group>"; };
 		F3011EB52103E16F0005307C /* NewsFeedsDetailsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedsDetailsData.swift; sourceTree = "<group>"; };
@@ -96,12 +101,10 @@
 		F328741120A0D94D004CCB33 /* NEO SANS ARABIC BOLD.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NEO SANS ARABIC BOLD.TTF"; sourceTree = "<group>"; };
 		F328741220A0D94D004CCB33 /* NEOSANSARABIC.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = NEOSANSARABIC.TTF; sourceTree = "<group>"; };
 		F328741520A0DD76004CCB33 /* BodyMeasurementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyMeasurementCell.swift; sourceTree = "<group>"; };
-		F328741620A0DD76004CCB33 /* BodyMeasurementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyMeasurementCell.xib; sourceTree = "<group>"; };
 		F328741920A0E014004CCB33 /* BodyMeasurementVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyMeasurementVC.swift; sourceTree = "<group>"; };
 		F328741B20A0E106004CCB33 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 		F328741F20A0F154004CCB33 /* MyExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExtensions.swift; sourceTree = "<group>"; };
 		F328742320A0F951004CCB33 /* ItemDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsVC.swift; sourceTree = "<group>"; };
-		F328742420A0F951004CCB33 /* ItemDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDetailsVC.xib; sourceTree = "<group>"; };
 		F328742820A0FCB9004CCB33 /* UIButtonX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonX.swift; sourceTree = "<group>"; };
 		F328742920A0FCB9004CCB33 /* UIImageViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewX.swift; sourceTree = "<group>"; };
 		F328742A20A0FCB9004CCB33 /* UILabelX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelX.swift; sourceTree = "<group>"; };
@@ -117,6 +120,20 @@
 		F328743F20A10522004CCB33 /* CategoriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCell.xib; sourceTree = "<group>"; };
 		F328744220A11453004CCB33 /* Login + RegisterationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login + RegisterationVC.swift"; sourceTree = "<group>"; };
 		F328744420A11762004CCB33 /* ReloadApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadApp.swift; sourceTree = "<group>"; };
+		F3440ED221239F2900CA6303 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		F3440ED321239F2900CA6303 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F3440ED52123A00900CA6303 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BodyMeasurementCell.xib; sourceTree = "<group>"; };
+		F3440ED82123A00D00CA6303 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/BodyMeasurementCell.strings; sourceTree = "<group>"; };
+		F3440EDA2123A03500CA6303 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/EditProfileVC.xib; sourceTree = "<group>"; };
+		F3440EE52123A0F900CA6303 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/EditProfileVC.strings; sourceTree = "<group>"; };
+		F3440EE72123A23B00CA6303 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/NextBtnTableVCell.xib; sourceTree = "<group>"; };
+		F3440EEA2123A23E00CA6303 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/NextBtnTableVCell.strings; sourceTree = "<group>"; };
+		F3440EEC2123A32900CA6303 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/RegisterVC.xib; sourceTree = "<group>"; };
+		F3440EEF2123A32C00CA6303 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/RegisterVC.strings; sourceTree = "<group>"; };
+		F3440EF12123A3BB00CA6303 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ItemDetailsVC.xib; sourceTree = "<group>"; };
+		F3440EF42123A3BF00CA6303 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ItemDetailsVC.strings; sourceTree = "<group>"; };
+		F3440EF62123AA5300CA6303 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GuideViewC.xib; sourceTree = "<group>"; };
+		F3440EF92123AA5800CA6303 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/GuideViewC.strings; sourceTree = "<group>"; };
 		F35158AB210680FF007E70A6 /* Post_Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post_Image.swift; sourceTree = "<group>"; };
 		F35158AD210681E0007E70A6 /* Localization_Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization_Alerts.swift; sourceTree = "<group>"; };
 		F35158AE210681E0007E70A6 /* LoclizationExConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoclizationExConstant.swift; sourceTree = "<group>"; };
@@ -128,7 +145,6 @@
 		F378230720FE7AD900BD0BB3 /* BrandsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandsCell.swift; sourceTree = "<group>"; };
 		F378230820FE7AD900BD0BB3 /* BrandsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandsCell.xib; sourceTree = "<group>"; };
 		F378230B20FE7AD900BD0BB3 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
-		F378230C20FE7AD900BD0BB3 /* EditProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileVC.xib; sourceTree = "<group>"; };
 		F391FEC520A11D61005AE220 /* Post_Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post_Requests.swift; sourceTree = "<group>"; };
 		F391FEC720A11D78005AE220 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		F391FEC920A11D85005AE220 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
@@ -196,7 +212,7 @@
 				F328743E20A10522004CCB33 /* CategoriesCell.swift */,
 				F328743F20A10522004CCB33 /* CategoriesCell.xib */,
 				F328741520A0DD76004CCB33 /* BodyMeasurementCell.swift */,
-				F328741620A0DD76004CCB33 /* BodyMeasurementCell.xib */,
+				F3440ED62123A00900CA6303 /* BodyMeasurementCell.xib */,
 				F328741920A0E014004CCB33 /* BodyMeasurementVC.swift */,
 				F3011EAE210393F40005307C /* Profile */,
 				F328744220A11453004CCB33 /* Login + RegisterationVC.swift */,
@@ -206,15 +222,15 @@
 				F378230720FE7AD900BD0BB3 /* BrandsCell.swift */,
 				F378230820FE7AD900BD0BB3 /* BrandsCell.xib */,
 				8428F13C20BA1172008310D6 /* NextBtnTableVCell.swift */,
-				8428F13D20BA1172008310D6 /* NextBtnTableVCell.xib */,
+				F3440EE82123A23B00CA6303 /* NextBtnTableVCell.xib */,
 				8428F13320B9F1BA008310D6 /* BodyMeasureVC.swift */,
 				8428F14120BA1658008310D6 /* GuideViewC.swift */,
-				8428F14020BA1658008310D6 /* GuideViewC.xib */,
+				F3440EF72123AA5300CA6303 /* GuideViewC.xib */,
 				84072CEF20B849B200B7D01A /* RegisterVC.swift */,
-				84072CF020B849B200B7D01A /* RegisterVC.xib */,
+				F3440EED2123A32900CA6303 /* RegisterVC.xib */,
 				F328744420A11762004CCB33 /* ReloadApp.swift */,
 				F328742320A0F951004CCB33 /* ItemDetailsVC.swift */,
-				F328742420A0F951004CCB33 /* ItemDetailsVC.xib */,
+				F3440EF22123A3BB00CA6303 /* ItemDetailsVC.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -223,7 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				F378230B20FE7AD900BD0BB3 /* EditProfileVC.swift */,
-				F378230C20FE7AD900BD0BB3 /* EditProfileVC.xib */,
+				F3440EDB2123A03500CA6303 /* EditProfileVC.xib */,
 			);
 			path = Profile_Tree;
 			sourceTree = "<group>";
@@ -279,6 +295,10 @@
 				F3287406209FC44B004CCB33 /* Assets.xcassets */,
 				F3287408209FC44B004CCB33 /* LaunchScreen.storyboard */,
 				F3011EB921040A500005307C /* launchBackGround.png */,
+				F30054522123871A00664FFD /* L012Localizer.swift */,
+				F30054512123871900664FFD /* L102Language.swift */,
+				F30054532123871C00664FFD /* MirroringLabel.swift */,
+				F30054542123871D00664FFD /* MirroringViewController.swift */,
 				F328742720A0FCB9004CCB33 /* DesignableX */,
 				F328741120A0D94D004CCB33 /* NEO SANS ARABIC BOLD.TTF */,
 				F328741220A0D94D004CCB33 /* NEOSANSARABIC.TTF */,
@@ -357,6 +377,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = F32873F3209FC44B004CCB33;
 			productRefGroup = F32873FD209FC44B004CCB33 /* Products */;
@@ -374,22 +395,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				F378230620FE7AD900BD0BB3 /* AboutUsVC.xib in Resources */,
-				8428F14320BA165D008310D6 /* GuideViewC.xib in Resources */,
-				F378230E20FE7AD900BD0BB3 /* EditProfileVC.xib in Resources */,
+				F3440EF52123AA5300CA6303 /* GuideViewC.xib in Resources */,
+				F3440ED92123A03500CA6303 /* EditProfileVC.xib in Resources */,
 				F378230A20FE7AD900BD0BB3 /* BrandsCell.xib in Resources */,
 				F328740A209FC44B004CCB33 /* LaunchScreen.storyboard in Resources */,
 				F328744120A10522004CCB33 /* CategoriesCell.xib in Resources */,
 				F3FB746920A2947A0077CF42 /* Info.plist in Resources */,
-				F328742620A0F951004CCB33 /* ItemDetailsVC.xib in Resources */,
+				F3440EF02123A3BB00CA6303 /* ItemDetailsVC.xib in Resources */,
 				F328741420A0D94D004CCB33 /* NEOSANSARABIC.TTF in Resources */,
 				F3287407209FC44B004CCB33 /* Assets.xcassets in Resources */,
 				F328741320A0D94D004CCB33 /* NEO SANS ARABIC BOLD.TTF in Resources */,
-				8428F13F20BA1172008310D6 /* NextBtnTableVCell.xib in Resources */,
-				F328741820A0DD76004CCB33 /* BodyMeasurementCell.xib in Resources */,
+				F3440EE62123A23B00CA6303 /* NextBtnTableVCell.xib in Resources */,
+				F3440ED42123A00900CA6303 /* BodyMeasurementCell.xib in Resources */,
 				F3011EBA21040A500005307C /* launchBackGround.png in Resources */,
 				8428F12E20B979B2008310D6 /* GoogleService-Info.plist in Resources */,
 				F3287405209FC44B004CCB33 /* Main.storyboard in Resources */,
-				84072CF220B849B200B7D01A /* RegisterVC.xib in Resources */,
+				F3440EEB2123A32900CA6303 /* RegisterVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,11 +517,13 @@
 				F328743B20A0FCB9004CCB33 /* UIVisualEffectViewX.swift in Sources */,
 				F328743620A0FCB9004CCB33 /* UITextFieldX.swift in Sources */,
 				F35158AC210680FF007E70A6 /* Post_Image.swift in Sources */,
+				F30054552123871E00664FFD /* L102Language.swift in Sources */,
 				8428F13E20BA1172008310D6 /* NextBtnTableVCell.swift in Sources */,
 				F3011EB02103DFEC0005307C /* NewsFeedVC.swift in Sources */,
 				F378230220FC2D7000BD0BB3 /* ProfileCell.swift in Sources */,
 				F328744520A11763004CCB33 /* ReloadApp.swift in Sources */,
 				F35158AF210681E1007E70A6 /* Localization_Alerts.swift in Sources */,
+				F30054572123871E00664FFD /* MirroringLabel.swift in Sources */,
 				F328742020A0F154004CCB33 /* MyExtensions.swift in Sources */,
 				F3011EB42103E0A00005307C /* NewsFeedCell.swift in Sources */,
 				F391FECC20A2340C005AE220 /* Data_Model.swift in Sources */,
@@ -520,8 +543,10 @@
 				F328743820A0FCB9004CCB33 /* UIViewControllerX.swift in Sources */,
 				F328743520A0FCB9004CCB33 /* UISliderX.swift in Sources */,
 				F378230D20FE7AD900BD0BB3 /* EditProfileVC.swift in Sources */,
+				F30054562123871E00664FFD /* L012Localizer.swift in Sources */,
 				F328743D20A10136004CCB33 /* HomePageVC.swift in Sources */,
 				F378230020FC2CF200BD0BB3 /* ProfileVC.swift in Sources */,
+				F30054582123871E00664FFD /* MirroringViewController.swift in Sources */,
 				F328743420A0FCB9004CCB33 /* UILabelX.swift in Sources */,
 				84072CF620B8519D00B7D01A /* UIViewControllerExt.swift in Sources */,
 				F391FECA20A11D85005AE220 /* Connection.swift in Sources */,
@@ -543,6 +568,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F3287404209FC44B004CCB33 /* Base */,
+				F3440ED221239F2900CA6303 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -551,8 +577,63 @@
 			isa = PBXVariantGroup;
 			children = (
 				F3287409209FC44B004CCB33 /* Base */,
+				F3440ED321239F2900CA6303 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F3440ED62123A00900CA6303 /* BodyMeasurementCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3440ED52123A00900CA6303 /* Base */,
+				F3440ED82123A00D00CA6303 /* ar */,
+			);
+			name = BodyMeasurementCell.xib;
+			sourceTree = "<group>";
+		};
+		F3440EDB2123A03500CA6303 /* EditProfileVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3440EDA2123A03500CA6303 /* Base */,
+				F3440EE52123A0F900CA6303 /* ar */,
+			);
+			name = EditProfileVC.xib;
+			sourceTree = "<group>";
+		};
+		F3440EE82123A23B00CA6303 /* NextBtnTableVCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3440EE72123A23B00CA6303 /* Base */,
+				F3440EEA2123A23E00CA6303 /* ar */,
+			);
+			name = NextBtnTableVCell.xib;
+			sourceTree = "<group>";
+		};
+		F3440EED2123A32900CA6303 /* RegisterVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3440EEC2123A32900CA6303 /* Base */,
+				F3440EEF2123A32C00CA6303 /* ar */,
+			);
+			name = RegisterVC.xib;
+			sourceTree = "<group>";
+		};
+		F3440EF22123A3BB00CA6303 /* ItemDetailsVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3440EF12123A3BB00CA6303 /* Base */,
+				F3440EF42123A3BF00CA6303 /* ar */,
+			);
+			name = ItemDetailsVC.xib;
+			sourceTree = "<group>";
+		};
+		F3440EF72123AA5300CA6303 /* GuideViewC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3440EF62123AA5300CA6303 /* Base */,
+				F3440EF92123AA5800CA6303 /* ar */,
+			);
+			name = GuideViewC.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -562,6 +643,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -619,6 +701,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -17,6 +16,7 @@
                 <outlet property="a_lineV" destination="dtN-b2-vZo" id="0ps-8U-i1B"/>
                 <outlet property="b_lineCircle" destination="jwg-ej-91C" id="xNX-QX-a8S"/>
                 <outlet property="b_lineV" destination="MRe-5q-pib" id="XF9-cm-O39"/>
+                <outlet property="backBtnImgV" destination="usG-qh-s1A" id="X4f-sg-HVd"/>
                 <outlet property="bigSizeLbl" destination="SWa-mV-P2x" id="jwD-kt-Qkg"/>
                 <outlet property="bodyLbl" destination="pf6-5a-cgB" id="EoO-1B-fen"/>
                 <outlet property="c_lineCircle" destination="GBs-5c-pBD" id="H8g-lC-gqN"/>
@@ -158,7 +158,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="eAd-M2-bUs">
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="21"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFl-pO-ZS3" customClass="UILabelX" customModule="Fit_Shop" customModuleProvider="target">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="20" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFl-pO-ZS3" customClass="UILabelX" customModule="Fit_Shop" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="21" height="21"/>
                                                     <color key="backgroundColor" red="0.0" green="0.67172992229999995" blue="0.65136796239999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -194,7 +194,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="miq-AQ-WdA">
                                             <rect key="frame" x="0.0" y="29" width="335" height="21"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVx-tU-fXn" customClass="UILabelX" customModule="Fit_Shop" customModuleProvider="target">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="20" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVx-tU-fXn" customClass="UILabelX" customModule="Fit_Shop" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="21" height="21"/>
                                                     <color key="backgroundColor" red="0.0" green="0.67172992229999995" blue="0.65136796239999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -230,7 +230,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="VGT-Zt-KOm">
                                             <rect key="frame" x="0.0" y="58" width="335" height="21"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbg-k0-old" customClass="UILabelX" customModule="Fit_Shop" customModuleProvider="target">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="20" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbg-k0-old" customClass="UILabelX" customModule="Fit_Shop" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="21" height="21"/>
                                                     <color key="backgroundColor" red="0.0" green="0.67172992229999995" blue="0.65136796239999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -266,7 +266,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="T1v-hF-nl9">
                                             <rect key="frame" x="0.0" y="87" width="335" height="21"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M84-Py-gOa" customClass="UILabelX" customModule="Fit_Shop" customModuleProvider="target">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="20" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M84-Py-gOa" customClass="UILabelX" customModule="Fit_Shop" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="21" height="21"/>
                                                     <color key="backgroundColor" red="0.0" green="0.6717299222946167" blue="0.65136796236038208" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -358,7 +358,7 @@
                                 <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jwg-ej-91C" userLabel="B_ViewX" customClass="UIViewX" customModule="Fit_Shop" customModuleProvider="target">
                                     <rect key="frame" x="205" y="194" width="20" height="20"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7d-af-iGO">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="20" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7d-af-iGO">
                                             <rect key="frame" x="-11" y="-1" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="11"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -383,7 +383,7 @@
                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yqZ-tF-hc6" userLabel="A_ViewX" customClass="UIViewX" customModule="Fit_Shop" customModuleProvider="target">
                                     <rect key="frame" x="208" y="99" width="20" height="20"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2e-aq-5Ol">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="20" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2e-aq-5Ol">
                                             <rect key="frame" x="-11" y="-1" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="11"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -36,8 +36,7 @@ class GuideViewC: UIViewController ,UIScrollViewDelegate{
     PagerDataC(title: "One Size Only _ Yours", body: "Get instand Adccess to Your Size on your Favorite Brands."),
     PagerDataC(title: "Measure Once Order Forever.", body: "Engage 5min of your Time and setup a Measurement profile.")
     
-    
-    ]
+        ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,11 +56,11 @@ class GuideViewC: UIViewController ,UIScrollViewDelegate{
         self.pageC.currentPage = 0
         
         
-//        if L102Language.currentAppleLanguage() == "ar" {
-// 
-//            pageC.transform = CGAffineTransform(rotationAngle: (180.0 * CGFloat(Double.pi)) / 180.0)
-//            
-//        }
+        if L102Language.currentAppleLanguage() == "ar" {
+ 
+            pageC.transform = CGAffineTransform(rotationAngle: (180.0 * CGFloat(Double.pi)) / 180.0)
+            
+        }
     }
 
     @IBAction func setupNewProfileHandler(_ sender: UIButton) {

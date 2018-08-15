@@ -7,11 +7,7 @@
 //
 
 import Foundation
-class L102Language {
-    static func currentAppleLanguage() -> String {
-        return "en"
-    }
-}
+ 
 typealias L0S  =   GetLocalizationValue
 enum GetLocalizationValue {
     
@@ -450,7 +446,7 @@ case  Phone_number_
             return  L102Language.currentAppleLanguage() == "ar" ? "البريد الإلكتروني:": "E-mail :"
 
         case .Name:
-            return  L102Language.currentAppleLanguage() == "ar" ? "الإسم": "Name"
+            return  L102Language.currentAppleLanguage() == "ar" ? "الإسم كامل": "Full Name"
         case .User_name:
             return  L102Language.currentAppleLanguage() == "ar" ? "اللقب": "User name"
         case .User_name_:

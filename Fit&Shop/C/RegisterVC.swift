@@ -16,6 +16,7 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var emailTxtF: SkyFloatingLabelTextField!
     @IBOutlet weak var passTxtF: SkyFloatingLabelTextField!
     @IBOutlet weak var mobileNumTxtF: SkyFloatingLabelTextField!
+    @IBOutlet weak var imgBackView: UIImageView!
     
     @IBOutlet weak var maleImgV: UIImageView!
     @IBOutlet weak var femaleImgV: UIImageView!
@@ -26,10 +27,27 @@ class RegisterVC: UIViewController {
         super.viewDidLoad()
         loca()
         // Do any additional setup after loading the view.
+        if L102Language.currentAppleLanguage() == "ar" {
+            self.imgBackView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+            loclizeData() 
+        }
     }
     
     
     
+    func loclizeData() {
+        
+        self.firstNameTxtF.placeholder = L0S.Name.stringValue()
+        self.mobileNumTxtF.placeholder = L0S.Phone_number.stringValue()
+        self.emailTxtF.placeholder = L0S.E_mail.stringValue()
+        self.passTxtF.placeholder = L0S.Password.stringValue()
+        
+        self.firstNameTxtF.selectedTitle = L0S.FirstName_ .stringValue()
+        self.mobileNumTxtF.selectedTitle = L0S.Phone_number.stringValue()
+        self.emailTxtF.selectedTitle = L0S.E_mail.stringValue()
+        self.passTxtF.selectedTitle = L0S.Password.stringValue()
+        
+    }
     
     @IBAction func backBtnHandler(_ sender: UIButton) {
         

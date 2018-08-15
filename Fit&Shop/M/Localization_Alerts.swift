@@ -48,6 +48,8 @@ enum GetAlertsLocalize {
     case deliveryDate
     case Write_Here
      case Thanks_for_your_review
+    case lang
+    case no_fit
     ///
     case Searching_for_Runner
     case Your_Order_has_been_Pickedup
@@ -164,6 +166,7 @@ enum GetAlertsLocalize {
     case Area_Fields_is_Required
     case Street_Fields_is_Required
     case Location_Fields_is_Required
+    case about_us
 case return_Policy
     func stringValue() -> String {
         switch self {
@@ -173,7 +176,13 @@ case return_Policy
 
         case .netWorkError:
             return  L102Language.currentAppleLanguage() == "ar" ? "مشكله بالإتصال برجاء التحقق من الشبكة": "Network Failer,Please check your Network"
+        case .no_fit:
+            return  L102Language.currentAppleLanguage() == "ar" ? "لم نستطع ايجاد قطع ملائمة لك حتي الآن": "We couldn't find your fit for now."
 
+        case .lang:
+            return  L102Language.currentAppleLanguage() == "ar" ? "اللغة": "Language"
+        case .about_us:
+            return  L102Language.currentAppleLanguage() == "ar" ? "من نحن": "About Us"
         case .shipmment_Num:
             return  L102Language.currentAppleLanguage() == "ar" ? "رقم الشحنة : ": "Shippment No : "
         case .Order_Summary:
@@ -281,7 +290,7 @@ case return_Policy
             return  L102Language.currentAppleLanguage() == "ar" ? "طرق الدفع": "Installment"
             
         case .Sign_out:
-            return  L102Language.currentAppleLanguage() == "ar" ? "تسجيل خروج": "Sign out"
+            return  L102Language.currentAppleLanguage() == "ar" ? "خروج": "Sign out"
             //
         case .please_check_value_twice_before_payment:
             return  L102Language.currentAppleLanguage() == "ar" ? "برجاء مراجعة الحساب جيدا قبل الدفع": "please check value twice before payment"

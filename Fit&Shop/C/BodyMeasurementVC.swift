@@ -40,7 +40,9 @@ self.dismissPushedView()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if L102Language.currentAppleLanguage() == "ar" {
+            self.backImgV.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+        }
 //        if phoneNum == "" {
 //            backImgV.alpha = 1
 //        }else {

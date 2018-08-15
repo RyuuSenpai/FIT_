@@ -28,6 +28,8 @@ class EditProfileVC: UIViewController  {
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var profileImage: UIImageViewX!
 
+    
+
     weak var delegate : UpdatedProfilePic?
     var parm = [String : Any]()
     var data : Profile_Details_M?
@@ -65,8 +67,27 @@ class EditProfileVC: UIViewController  {
         profileImage.addGestureRecognizer(tapGestureRecognizer)
         picker.delegate = self
 
-        
+        loclizeData()
     }
+    
+    
+    func loclizeData() {
+        
+        self.fullNameTF.placeholder = L0S.Name.stringValue()
+        self.phoneNumTF.placeholder = L0S.Phone_number.stringValue()
+        self.emailTF.placeholder = L0S.E_mail.stringValue()
+        self.oldPassTF.placeholder = L0S.Old_Password.stringValue()
+        self.newPassTF.placeholder = L0S.New_Password.stringValue()
+        self.confirmPassTF.placeholder = L0S.Confirm_New_Password.stringValue()
+        
+        self.fullNameTF.selectedTitle = L0S.Name.stringValue()
+        self.phoneNumTF.selectedTitle = L0S.Phone_number.stringValue()
+        self.emailTF.selectedTitle = L0S.E_mail.stringValue()
+        self.oldPassTF.selectedTitle = L0S.Old_Password.stringValue()
+        self.newPassTF.selectedTitle = L0S.New_Password.stringValue()
+        self.confirmPassTF.selectedTitle = L0S.Confirm_New_Password.stringValue()
+    }
+    
     
     func setupdata() {
         guard let data = data else { return }

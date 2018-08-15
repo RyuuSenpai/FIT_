@@ -1,0 +1,19 @@
+
+/* Class = "UILabel"; text = "Male"; ObjectID = "BPs-70-Jud"; */
+"BPs-70-Jud.text" = "ذكر";
+
+/* Class = "UILabel"; text = "Gender"; ObjectID = "Iut-q6-hMN"; */
+"Iut-q6-hMN.text" = "النوع";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "nKE-uw-dQr"; */
+"nKE-uw-dQr.normalTitle" = "التسجيل";
+
+/* Class = "UILabel"; text = "Female"; ObjectID = "oJd-Ei-SgJ"; */
+"oJd-Ei-SgJ.text" = "أنثي";
+
+
+"1PZ-9r-eEi.placeholder" = "الإسم الكامل";
+"yMb-4f-5zU.placeholder" = "البريد الإلكتروني";
+"z8N-CA-1lo.placeholder" = "رقم الهاتف";
+"W7P-U0-WrM.placeholder" = "كلمة المرور";
+

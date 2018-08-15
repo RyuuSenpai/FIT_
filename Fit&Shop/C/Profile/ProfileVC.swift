@@ -32,12 +32,21 @@ class ProfileVC: UIViewController  , UICollectionViewDelegate , UICollectionView
         collectionView.delegate = self
         collectionView.dataSource = self
         // Do any additional setup after loading the view.
-        imgDict  = [("Edit",UIImage(named:"ic_edit_")!),//0
-            ("Rate Us",UIImage(named:"ic_rate_")!),//1
-            ("Share",UIImage(named:"ic_share_")!),//2
-            ("Language",UIImage(named:"ic_language_")!),//3
-            ("About Us",UIImage(named:"ic_aboutus_")!),//4
-            ("Logout",UIImage(named:"ic_logout_")!) ]//5
+//        imgDict  = [("Edit",UIImage(named:"ic_edit_")!),//0
+//            ("Rate Us",UIImage(named:"ic_rate_")!),//1
+//            ("Share",UIImage(named:"ic_share_")!),//2
+//            ("Language",UIImage(named:"ic_language_")!),//3
+//            ("About Us",UIImage(named:"ic_aboutus_")!),//4
+//            ("Logout",UIImage(named:"ic_logout_")!) ]//5
+       imgDict  =  [(L0A.Edit.stringValue(),UIImage(named:"ic_edit_")!),//0
+            (L0A.Rate_US.stringValue(),UIImage(named:"ic_rate_")!),//1
+            (L0A.Share.stringValue(),UIImage(named:"ic_share_")!),//2
+            (L0A.lang.stringValue(),UIImage(named:"ic_language_")!),//3
+            (L0A.about_us.stringValue(),UIImage(named:"ic_aboutus_")!),//4
+            (L0A.Sign_out.stringValue(),UIImage(named:"ic_logout_")!),//5
+           ]
+        
+    
         getUserData()
       }
     
@@ -90,6 +99,21 @@ class ProfileVC: UIViewController  , UICollectionViewDelegate , UICollectionView
         return CGSize(width: width, height: width * 1.5 )
     }
     
+    
+    func change() {
+        
+//        var transition: UIViewAnimationOptions = .transitionFlipFromLeft
+        if L102Language.currentAppleLanguage() == "en" {
+            L102Language.setAppleLAnguageTo(lang: "ar")
+            UIView.appearance().semanticContentAttribute = .forceRightToLeft
+        } else {
+            L102Language.setAppleLAnguageTo(lang: "en")
+//            transition = .transitionFlipFromRight
+            UIView.appearance().semanticContentAttribute = .forceLeftToRight
+        }
+        ad.reloadWithAnimationToHome()
+    }
+  
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
 //        return 25
 //    }
@@ -109,6 +133,14 @@ class ProfileVC: UIViewController  , UICollectionViewDelegate , UICollectionView
             vc.data = self.profileData
             vc.delegate = self 
             self.navigationController?.pushViewController(vc, animated: true )
+        case 1 :
+            rateApp( completion: { (booll) in
+                //                print(booll)
+            })
+        case 2 :
+            share()
+        case 3 :
+             change()
         case 4 :
             let vc = AboutUsVC()
             self.navigationController?.pushViewController(vc, animated: true)
@@ -125,6 +157,33 @@ class ProfileVC: UIViewController  , UICollectionViewDelegate , UICollectionView
     }
     
  
+    func share() {
+        let shareText = "Hyper Techno \n https://itunes.apple.com/us/app/hyper-techno/id1382143993?ls=1&mt=8"
+        //        let  strURL = ""
+        let parm :[Any] = [shareText]
+        //        if let url = URL(string : data.main_image )
+        //        {
+        //            parm.append(strURL)
+        //        }
+        
+        let vc = UIActivityViewController(activityItems: parm, applicationActivities: [])
+        self.present(vc, animated: true)
+    }
+    func rateApp(  completion: @escaping ((_ success: Bool)->())) {
+        //https://itunes.apple.com/us/app/hyper-techno/id1375333362?ls=1&mt=8
+        let appId = "id1382143993"
+        guard let url = URL(string : "itms-apps://itunes.apple.com/app/" + appId
+            ) else {
+                completion(false)
+                return
+        }
+        guard #available(iOS 10, *) else {
+            completion(UIApplication.shared.openURL(url))
+            return
+        }
+        UIApplication.shared.open(url, options: [:], completionHandler: completion)
+    }
+    
 }
 
 extension ProfileVC : UpdatedProfilePic  {
