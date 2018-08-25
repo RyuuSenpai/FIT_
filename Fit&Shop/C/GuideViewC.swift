@@ -31,10 +31,10 @@ class GuideViewC: UIViewController ,UIScrollViewDelegate{
     }
     
     private let dict : [PagerDataC] = [
-    PagerDataC(title: "AWESOME DEALS Waiting for You.", body: "Only one step and you will never miss a deal let's fit you"),
-    PagerDataC(title: "Perfect Fit Guaranteed", body: "To Wear Clothes With a Perfect Fit is a Confidence Boost Everyone Should Experience."),
-    PagerDataC(title: "One Size Only _ Yours", body: "Get instand Adccess to Your Size on your Favorite Brands."),
-    PagerDataC(title: "Measure Once Order Forever.", body: "Engage 5min of your Time and setup a Measurement profile.")
+    PagerDataC(title: L0A.awesome.stringValue(), body: L0A.awesomeText.stringValue()),
+    PagerDataC(title: L0A.perfect.stringValue(), body: L0A.perfectTxt.stringValue()),
+    PagerDataC(title: L0A.onSize.stringValue(), body: L0A.onSizeTxt.stringValue()),
+    PagerDataC(title: L0A.measureOnce.stringValue(), body: L0A.measureOnceTxt.stringValue())
     
         ]
     

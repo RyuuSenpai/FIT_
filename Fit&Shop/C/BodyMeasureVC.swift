@@ -100,16 +100,16 @@ class BodyMeasureVC: UIViewController  , UITableViewDelegate , UITableViewDataSo
             bodyUnderLineV.backgroundColor =  .clear
             pieceImgV.image =   #imageLiteral(resourceName: "ic_pices_active_")
             pieceUnderLineV.backgroundColor =   .orange
-            measurmentTypeLbl.text = "Piece Measurement"
-            bodyLbl.text  = "Tell us about a Piece\n that fit you Perfectly"
+            measurmentTypeLbl.text = L0A.piece.stringValue()
+            bodyLbl.text  = L0A.tell_Us.stringValue()
             mainImgV.image =     #imageLiteral(resourceName: "bg_pices")
         }else {
             bodyImgV.image =   #imageLiteral(resourceName: "ic_body_active_")
             bodyUnderLineV.backgroundColor =   .orange
             pieceImgV.image =   #imageLiteral(resourceName: "ic_pices_unactive_")
             pieceUnderLineV.backgroundColor =   .clear
-            measurmentTypeLbl.text = "Body Measurement"
-            bodyLbl.text  = "Measure your Body parts\n and get the perfect fit size."
+            measurmentTypeLbl.text = L0A.body.stringValue()
+            bodyLbl.text  = L0A.piece_Mea.stringValue()
             mainImgV.image =   #imageLiteral(resourceName: "bg_body")
         }
         tableView.reloadData()

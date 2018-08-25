@@ -14,6 +14,7 @@
 		8428F13420B9F1BA008310D6 /* BodyMeasureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428F13320B9F1BA008310D6 /* BodyMeasureVC.swift */; };
 		8428F13E20BA1172008310D6 /* NextBtnTableVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428F13C20BA1172008310D6 /* NextBtnTableVCell.swift */; };
 		8428F14220BA1658008310D6 /* GuideViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428F14120BA1658008310D6 /* GuideViewC.swift */; };
+		8456EB2B2131E2AB00CC0B0F /* AboutUsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8456EB2D2131E2AB00CC0B0F /* AboutUsVC.xib */; };
 		F30054552123871E00664FFD /* L102Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30054512123871900664FFD /* L102Language.swift */; };
 		F30054562123871E00664FFD /* L012Localizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30054522123871A00664FFD /* L012Localizer.swift */; };
 		F30054572123871E00664FFD /* MirroringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30054532123871C00664FFD /* MirroringLabel.swift */; };
@@ -62,7 +63,6 @@
 		F378230020FC2CF200BD0BB3 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37822FF20FC2CF200BD0BB3 /* ProfileVC.swift */; };
 		F378230220FC2D7000BD0BB3 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F378230120FC2D7000BD0BB3 /* ProfileCell.swift */; };
 		F378230520FE7AD900BD0BB3 /* AboutUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F378230320FE7AD900BD0BB3 /* AboutUsVC.swift */; };
-		F378230620FE7AD900BD0BB3 /* AboutUsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F378230420FE7AD900BD0BB3 /* AboutUsVC.xib */; };
 		F378230920FE7AD900BD0BB3 /* BrandsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F378230720FE7AD900BD0BB3 /* BrandsCell.swift */; };
 		F378230A20FE7AD900BD0BB3 /* BrandsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F378230820FE7AD900BD0BB3 /* BrandsCell.xib */; };
 		F378230D20FE7AD900BD0BB3 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F378230B20FE7AD900BD0BB3 /* EditProfileVC.swift */; };
@@ -81,6 +81,8 @@
 		8428F13320B9F1BA008310D6 /* BodyMeasureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyMeasureVC.swift; sourceTree = "<group>"; };
 		8428F13C20BA1172008310D6 /* NextBtnTableVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextBtnTableVCell.swift; sourceTree = "<group>"; };
 		8428F14120BA1658008310D6 /* GuideViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewC.swift; sourceTree = "<group>"; };
+		8456EB2C2131E2AB00CC0B0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AboutUsVC.xib; sourceTree = "<group>"; };
+		8456EB2F2131E2B000CC0B0F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AboutUsVC.strings; sourceTree = "<group>"; };
 		B2310A097003C4327DC50366 /* Pods-Fit&Shop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fit&Shop.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fit&Shop/Pods-Fit&Shop.release.xcconfig"; sourceTree = "<group>"; };
 		DBB9BA608B89017EC69F6CE6 /* Pods_Fit_Shop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fit_Shop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F30054512123871900664FFD /* L102Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L102Language.swift; sourceTree = "<group>"; };
@@ -141,7 +143,6 @@
 		F37822FF20FC2CF200BD0BB3 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		F378230120FC2D7000BD0BB3 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		F378230320FE7AD900BD0BB3 /* AboutUsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsVC.swift; sourceTree = "<group>"; };
-		F378230420FE7AD900BD0BB3 /* AboutUsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutUsVC.xib; sourceTree = "<group>"; };
 		F378230720FE7AD900BD0BB3 /* BrandsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandsCell.swift; sourceTree = "<group>"; };
 		F378230820FE7AD900BD0BB3 /* BrandsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandsCell.xib; sourceTree = "<group>"; };
 		F378230B20FE7AD900BD0BB3 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
@@ -217,7 +218,7 @@
 				F3011EAE210393F40005307C /* Profile */,
 				F328744220A11453004CCB33 /* Login + RegisterationVC.swift */,
 				F378230320FE7AD900BD0BB3 /* AboutUsVC.swift */,
-				F378230420FE7AD900BD0BB3 /* AboutUsVC.xib */,
+				8456EB2D2131E2AB00CC0B0F /* AboutUsVC.xib */,
 				F328743C20A10136004CCB33 /* HomePageVC.swift */,
 				F378230720FE7AD900BD0BB3 /* BrandsCell.swift */,
 				F378230820FE7AD900BD0BB3 /* BrandsCell.xib */,
@@ -394,7 +395,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F378230620FE7AD900BD0BB3 /* AboutUsVC.xib in Resources */,
+				8456EB2B2131E2AB00CC0B0F /* AboutUsVC.xib in Resources */,
 				F3440EF52123AA5300CA6303 /* GuideViewC.xib in Resources */,
 				F3440ED92123A03500CA6303 /* EditProfileVC.xib in Resources */,
 				F378230A20FE7AD900BD0BB3 /* BrandsCell.xib in Resources */,
@@ -564,6 +565,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		8456EB2D2131E2AB00CC0B0F /* AboutUsVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8456EB2C2131E2AB00CC0B0F /* Base */,
+				8456EB2F2131E2B000CC0B0F /* ar */,
+			);
+			name = AboutUsVC.xib;
+			sourceTree = "<group>";
+		};
 		F3287403209FC44B004CCB33 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

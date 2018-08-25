@@ -51,13 +51,13 @@ self.dismissPushedView()
         horizontalSlider.value = 0.0
         horizontalSlider.isUserInteractionEnabled = false 
 setupSegment()
-        data.append(BodyM_Model(title: "Chest", body: "Measure your chest at the widest point.Stand in a relaxed posture and breath out.", image: UIImage(named:"pic_chest")))
+        data.append(BodyM_Model(title: L0A.Chest.stringValue(), body: L0A.Measure_your_chest.stringValue(), image: UIImage(named:"pic_chest")))
         
-                data.append(BodyM_Model(title: "Waist", body: "Measure your waist just above your belly button. or at the narrow point. (Stand staight and relaced posture and breathe out", image: UIImage(named:"pic_hips")))
+                data.append(BodyM_Model(title: L0A.Waist.stringValue(), body: L0A.Measure_your_waist.stringValue(), image: UIImage(named:"pic_hips")))
         
-        data.append(BodyM_Model(title: "Hips", body: "Take the circumference measurement around your hips at the widest part.", image: UIImage(named:"pic_waist")))
+        data.append(BodyM_Model(title: L0A.hips.stringValue(), body: L0A.Measure_your_hips.stringValue(), image: UIImage(named:"pic_waist")))
 
-                data.append(BodyM_Model(title: "Shirt Length", body: "Measure your Top Body Length from shoulder to Hips.", image: UIImage(named:"pic_length")))
+                data.append(BodyM_Model(title: L0A.Shirt_Length.stringValue(), body: L0A.Measure_your_length.stringValue(), image: UIImage(named:"pic_length")))
 
         tableView.delegate = self
         

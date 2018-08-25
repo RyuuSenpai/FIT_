@@ -441,7 +441,7 @@ case  Phone_number_
         case .Phone_number:
             return  L102Language.currentAppleLanguage() == "ar" ? "رقم الهاتف": "Phone number"
         case .E_mail:
-            return  L102Language.currentAppleLanguage() == "ar" ? "الإيميل": "E-mail"
+            return  L102Language.currentAppleLanguage() == "ar" ? "البريد الإلكتروني": "E-mail"
         case .E_mail_:
             return  L102Language.currentAppleLanguage() == "ar" ? "البريد الإلكتروني:": "E-mail :"
 
@@ -480,7 +480,7 @@ case  Phone_number_
         case .Sign_Up_With_Facebook:
             return  L102Language.currentAppleLanguage() == "ar" ? "تسجيل دخول بالفيس بوك": "Sign Up With Facebook"
         case .Sign_Up_With_Phone_or_Email:
-            return  L102Language.currentAppleLanguage() == "ar" ? "تسجيل الدخول بالإيميل أو الهاتف": "Signup with phone or Email"
+            return  L102Language.currentAppleLanguage() == "ar" ? "تسجيل الدخول بالبريد الإلكتروني أو الهاتف": "Signup with phone or Email"
         case .Already_have_an_account:
             return  L102Language.currentAppleLanguage() == "ar" ? "لديك حساب؟ دخول": "Already have an account? Login"
         case .Shop_now:

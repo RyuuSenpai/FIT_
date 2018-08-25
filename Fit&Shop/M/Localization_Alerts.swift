@@ -50,6 +50,7 @@ enum GetAlertsLocalize {
      case Thanks_for_your_review
     case lang
     case no_fit
+    case piece_Mea
     ///
     case Searching_for_Runner
     case Your_Order_has_been_Pickedup
@@ -167,10 +168,89 @@ enum GetAlertsLocalize {
     case Street_Fields_is_Required
     case Location_Fields_is_Required
     case about_us
+    case body
+    case piece
+    case tell_Us
+    case awesome
+    case awesomeText
+    case perfect
+    case perfectTxt
+    case onSize
+    case onSizeTxt
+    case measureOnce
+    case measureOnceTxt
+    case Chest
+    case Measure_your_chest
 case return_Policy
+     case Waist
+    case hips
+    case Measure_your_waist
+    case Measure_your_length
+    case Measure_your_hips
+case Shirt_Length
     func stringValue() -> String {
         switch self {
         //Hyper
+        case .Chest:
+            return  L102Language.currentAppleLanguage() == "ar" ? "صدر": "Chest"
+        case .Measure_your_chest:
+            return  L102Language.currentAppleLanguage() == "ar" ? "قياس صدر في أوسع نقطة الوقوف في وضع مريح مع الإستنشاق": "Measure your chest at the widest point.Stand in a relaxed posture and breath out."
+
+        case .Waist:
+            return  L102Language.currentAppleLanguage() == "ar" ? "وسط": "Waist"
+        case .Measure_your_waist:
+            return  L102Language.currentAppleLanguage() == "ar" ? "(قياس الخصر الخاص بك فقط فوق زر البطن أو عند نقطة ضيقة (الوقوف في وضع مستقيم مع الإسترخاء والزفير": "Measure your waist just above your belly button. or at the narrow point. (Stand staight and relaced posture and breathe out"
+
+        case .hips:
+            return  L102Language.currentAppleLanguage() == "ar" ? "الفخذين": "Hips"
+        case .Measure_your_hips:
+            return  L102Language.currentAppleLanguage() == "ar" ? "خذ قياس محيط حول الفخذين أوسع نطاق": "Take the circumference measurement around your hips at the widest part."
+
+        case .Shirt_Length:
+            return  L102Language.currentAppleLanguage() == "ar" ? "طول القميص": "Shirt Length"
+        case .Measure_your_length:
+            return  L102Language.currentAppleLanguage() == "ar" ? "قياس طول الجسم العلوي من الكتف إلي الفخذين": "Measure your Top Body Length from shoulder to Hips."
+
+ 
+            
+        case .awesome:
+            return  L102Language.currentAppleLanguage() == "ar" ? "عروض مذهلة في إنتظاركم": "AWESOME DEALS Waiting for You."
+
+        case .awesomeText:
+            return  L102Language.currentAppleLanguage() == "ar" ? "خطوة واحدة فقط ولن تفوتكم العروض , دعنا نلائمك": "Only one step and you will never miss a deal let's fit you"
+
+        case .perfect:
+            return  L102Language.currentAppleLanguage() == "ar" ? "ملاءمة مضمونة": "Perfect Fit Guaranteed"
+
+        case .perfectTxt:
+            return  L102Language.currentAppleLanguage() == "ar" ? "إرتداء الملابس المثالية هي تعزيز للثقة, يجب علي الجميع تجربتها": "To Wear Clothes With a Perfect Fit is a Confidence Boost Everyone Should Experience."
+
+        case .onSize:
+            return  L102Language.currentAppleLanguage() == "ar" ? "مقاس واحد فقط ": "One Size Only _ Yours"
+
+        case .onSizeTxt:
+            return  L102Language.currentAppleLanguage() == "ar" ? "الحصول علي إمكانية الوصول الفوري إلي مقاسك في العلامات التجارية المفضلة لك": "Get instand Adccess to Your Size on your Favorite Brands."
+
+        case .measureOnce:
+            return  L102Language.currentAppleLanguage() == "ar" ? "قم بالقياس لمرة واحدة واطلب للأبد": "Measure Once Order Forever."
+
+        case .measureOnceTxt :
+            return  L102Language.currentAppleLanguage() == "ar" ? "شارك ٥ دقائق من وقتك لإعداد نموذج قياس": "Engage 5min of your Time and setup a Measurement profile."
+
+            
+        case .piece_Mea :
+             return  L102Language.currentAppleLanguage() == "ar" ? "قياس أجزاء جسمك \n والحصول علي المثالية": "Tell us about a Piece\n that fit you Perfectly"
+            
+        case .body:
+            return  L102Language.currentAppleLanguage() == "ar" ? "قياس الجسم": "Piece Measurement"
+
+        case .piece:
+            return  L102Language.currentAppleLanguage() == "ar" ? "قياس قطعة": "Body Measurement"
+
+        case .tell_Us:
+            return  L102Language.currentAppleLanguage() == "ar" ? "إخبرنا عن قطعه تناسبك": "Measure your Body parts\n and get the perfect fit size."
+
+            
         case .return_Policy:
             return  L102Language.currentAppleLanguage() == "ar" ? "سياسة المرتجعات": "Return Policy"
 
@@ -449,9 +529,9 @@ case return_Policy
         case .Invalid_Password_:
             return  L102Language.currentAppleLanguage() == "ar" ? "كلمه المرور غير صحيحه ,يجب ان تحتوي كلمه المرور علي ٨ احرف علي الاقل/ ١٢ علي الاكثر ": "invalid Password,Password has to be more than 8 & less than 12 characters "
         case .Could_Not_Send_Email :
-            return  L102Language.currentAppleLanguage() == "ar" ? "لم نستطع إرسال الإيميل": "Could Not Send Email"
+            return  L102Language.currentAppleLanguage() == "ar" ? "لم نستطع إرسال البريد الإلكتروني": "Could Not Send Email"
         case .Your_device_could_not_send_E_mail :
-            return  L102Language.currentAppleLanguage() == "ar" ? "لم نستطع إرسال الإيميل, من فضلك تفقد إعدادات الجهاز": "Your device could not send e-mail.  Please check e-mail configuration and try again."
+            return  L102Language.currentAppleLanguage() == "ar" ? "لم نستطع إرسال البريد الإلكتروني, من فضلك تفقد إعدادات الجهاز": "Your device could not send e-mail.  Please check e-mail configuration and try again."
         case .Field_Can_not_be_Empty :
             return  L102Language.currentAppleLanguage() == "ar" ? "ذلك الحقل مطلوب": "Field Can't be Empty"
             
@@ -477,7 +557,7 @@ case return_Policy
         case .Password_has_to_contain_more_than_characters :
             return  L102Language.currentAppleLanguage() == "ar" ? "كلمه المرور يجب ان تكون اكبر من ٨ احرف": "Password has to contain more than 8 characters"
         case .Please_Check_your_E_mail :
-            return  L102Language.currentAppleLanguage() == "ar" ? "من فضلك تحقق من الإيميل الخاص بك": "Please Check your E-mail"
+            return  L102Language.currentAppleLanguage() == "ar" ? "من فضلك تحقق من البريد الإلكتروني الخاص بك": "Please Check your E-mail"
         case .Are_you_sure_you_want_to_call :
             return  L102Language.currentAppleLanguage() == "ar" ? "الاستمرار والاتصال بذلك الرقم ": "Are you sure you want to call"
         case .Yes :

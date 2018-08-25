@@ -109,6 +109,11 @@
 			<key>orderHint</key>
 			<integer>14</integer>
 		</dict>
+		<key>Protobuf.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>20</integer>
+		</dict>
 		<key>SSSlider.xcscheme</key>
 		<dict>
 			<key>isShown</key>

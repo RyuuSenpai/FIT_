@@ -55,7 +55,7 @@ class BodyMeasurementCell: UITableViewCell , UITextFieldDelegate{
 //    }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if let txt =  textField.text  ,let measur = Double(txt) {
+        if let measur =  textField.text   {
             let x = SavedMesurments(title: titleLbl.text!, measure: measur)
             classDelegate?.selectionArr[self.tag] =  x 
         }
@@ -73,5 +73,5 @@ struct BodyM_Model {
 
 struct SavedMesurments {
     var title : String!
-    var measure : Double!
+    var measure : String!
 }
