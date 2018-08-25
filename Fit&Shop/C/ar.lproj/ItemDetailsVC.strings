@@ -1,0 +1,66 @@
+
+/* Class = "UILabel"; text = "+2m"; ObjectID = "64W-jA-SJ9"; */
+"64W-jA-SJ9.text" = "+2m";
+
+/* Class = "UILabel"; text = "Fit & Shop"; ObjectID = "Ctj-ge-b7Z"; */
+"Ctj-ge-b7Z.text" = "Fit & Shop";
+
+/* Class = "UILabel"; text = "B"; ObjectID = "FVx-tU-fXn"; */
+"FVx-tU-fXn.text" = "B";
+
+/* Class = "UILabel"; text = "C"; ObjectID = "Fbg-k0-old"; */
+"Fbg-k0-old.text" = "C";
+
+/* Class = "UILabel"; text = "+3m"; ObjectID = "IFA-TX-z4B"; */
+"IFA-TX-z4B.text" = "+3m";
+
+/* Class = "UILabel"; text = "D"; ObjectID = "M84-Py-gOa"; */
+"M84-Py-gOa.text" = "D";
+
+/* Class = "UILabel"; text = "+4m"; ObjectID = "Mxd-Om-UKq"; */
+"Mxd-Om-UKq.text" = "+4m";
+
+/* Class = "UILabel"; text = "C"; ObjectID = "OHg-eW-bZN"; */
+"OHg-eW-bZN.text" = "C";
+
+/* Class = "UILabel"; text = "Waist:"; ObjectID = "OuJ-dy-WPV"; */
+"OuJ-dy-WPV.text" = "Waist:";
+
+/* Class = "UILabel"; text = "D"; ObjectID = "QMB-eL-lO9"; */
+"QMB-eL-lO9.text" = "D";
+
+/* Class = "UILabel"; text = "Chest:"; ObjectID = "Rhq-6M-Uhb"; */
+"Rhq-6M-Uhb.text" = "Chest:";
+
+/* Class = "UILabel"; text = "A"; ObjectID = "S2e-aq-5Ol"; */
+"S2e-aq-5Ol.text" = "A";
+
+/* Class = "UIButton"; normalTitle = "L"; ObjectID = "SWa-mV-P2x"; */
+"SWa-mV-P2x.normalTitle" = "L";
+
+/* Class = "UILabel"; text = "A"; ObjectID = "VFl-pO-ZS3"; */
+"VFl-pO-ZS3.text" = "A";
+
+/* Class = "UILabel"; text = "hips:"; ObjectID = "bz3-Sk-Hv0"; */
+"bz3-Sk-Hv0.text" = "hips:";
+
+/* Class = "UILabel"; text = "B"; ObjectID = "h7d-af-iGO"; */
+"h7d-af-iGO.text" = "B";
+
+/* Class = "UIButton"; normalTitle = "S"; ObjectID = "j9I-S6-Rdx"; */
+"j9I-S6-Rdx.normalTitle" = "S";
+
+/* Class = "UIButton"; normalTitle = "M"; ObjectID = "jMp-0c-hGv"; */
+"jMp-0c-hGv.normalTitle" = "M";
+
+/* Class = "UILabel"; text = "Ravin - T-Shirt"; ObjectID = "oez-aR-fFr"; */
+"oez-aR-fFr.text" = "Ravin - T-Shirt";
+
+/* Class = "UILabel"; text = "Your Measurment is :-"; ObjectID = "pf6-5a-cgB"; */
+"pf6-5a-cgB.text" = "قياساتك هي :";
+
+/* Class = "UILabel"; text = "+2m"; ObjectID = "sir-qJ-RXa"; */
+"sir-qJ-RXa.text" = "+2m";
+
+/* Class = "UILabel"; text = "Shirt length:"; ObjectID = "weI-ub-akj"; */
+"weI-ub-akj.text" = "Shirt length:";

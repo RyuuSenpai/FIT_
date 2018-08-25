@@ -1,0 +1,69 @@
+
+/* Class = "UITabBarItem"; title = "News Feed"; ObjectID = "5Hm-Fu-siu"; */
+"5Hm-Fu-siu.title" = "أخبار وعروض";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "7Aa-mV-mbB"; */
+"7Aa-mV-mbB.normalTitle" = "تم";
+
+/* Class = "UIButton"; normalTitle = "X"; ObjectID = "B8y-1q-XAj"; */
+"B8y-1q-XAj.normalTitle" = "X";
+
+/* Class = "UILabel"; text = " "; ObjectID = "CWA-2O-Oaf"; */
+"CWA-2O-Oaf.text" = " ";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "D0x-1A-fYY"; */
+"D0x-1A-fYY.title" = "الرئيسية";
+
+/* Class = "UILabel"; text = "Body Measurement"; ObjectID = "Dty-1O-zO1"; */
+"Dty-1O-zO1.text" = "قياسات الجسم";
+
+/* Class = "UILabel"; text = "Welcome!"; ObjectID = "EEs-Tz-FGZ"; */
+"EEs-Tz-FGZ.text" = "مرحباً";
+
+/* Class = "UILabel"; text = "0٪"; ObjectID = "LlS-dt-NA7"; */
+"LlS-dt-NA7.text" = "0٪";
+
+/* Class = "UILabel"; text = "Remember Me"; ObjectID = "OEL-H2-bYd"; */
+"OEL-H2-bYd.text" = "تذكر كلمة المرور";
+
+/* Class = "UILabel"; text = "OR"; ObjectID = "OHv-H6-KQV"; */
+"OHv-H6-KQV.text" = "أو";
+
+/* Class = "UILabel"; text = " "; ObjectID = "Wxg-re-KOM"; */
+"Wxg-re-KOM.text" = " ";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "Xp4-Md-bjy"; */
+"Xp4-Md-bjy.normalTitle" = "إنشاء حساب";
+
+/* Class = "UILabel"; text = "  "; ObjectID = "Ydp-Ve-Gb5"; */
+"Ydp-Ve-Gb5.text" = "  ";
+
+/* Class = "UILabel"; text = " "; ObjectID = "bXr-ad-VVW"; */
+"bXr-ad-VVW.text" = " ";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "bko-Ve-ZdE"; */
+"bko-Ve-ZdE.title" = "الملف الشخصي";
+
+/* Class = "UILabel"; text = "Measure your Body parts \nand get the perfext fit size."; ObjectID = "cRa-gZ-5dm"; */
+"cRa-gZ-5dm.text" = "Measure your Body parts \nand get the perfext fit size.";
+
+/* Class = "UILabel"; text = "Body Measurement"; ObjectID = "eng-Te-edf"; */
+"eng-Te-edf.text" = "قياسات الجسم";
+
+/* Class = "UITabBarItem"; title = "Measurements"; ObjectID = "ffx-0v-boM"; */
+"ffx-0v-boM.title" = "القياسات";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "jk5-iM-cdJ"; */
+"jk5-iM-cdJ.normalTitle" = "دخول";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jtV-5R-kBB"; */
+"jtV-5R-kBB.text" = "Label";
+
+/* Class = "UILabel"; text = "Don't have an account?"; ObjectID = "kaz-xE-LEa"; */
+"kaz-xE-LEa.text" = "ليس لديك حساب؟";
+
+/* Class = "UILabel"; text = "Choose Your favorite \n Measurment Method"; ObjectID = "mzu-c5-wwy"; */
+"mzu-c5-wwy.text" = "قم بإختيار   \n \n  طريقة قياسك المفضلة";
+
+/* Class = "UILabel"; text = "Fit & Shop"; ObjectID = "viO-bU-JaR"; */
+"viO-bU-JaR.text" = "Fit & Shop";

@@ -167,7 +167,7 @@ extension UIImageView {
         guard let url = URL(string: imagePath ) else { return }
         self.af_setImage(
             withURL: url ,
-            placeholderImage: UIImage(named: "Splash"),
+            placeholderImage: UIImage(named: "logo"),
             filter: nil,
             imageTransition: .crossDissolve(0.2)
         )
